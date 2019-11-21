@@ -48,13 +48,13 @@ Events:
   - **event attend** - As a user I want to be able to attend to event so that the organizers can count me in
 
 Edit profile:
--change email
--change password
+-**change email**
+-**change password**
 
 -moving the movie from "Want to see" to "Seen" section
 
 Search: 
-- find a movie base of different params e.g. (actor name, director name, year, country, etc)
+- **find a movie base of different params e.g. (actor name, director name, year, country, etc)**
 
 
 
