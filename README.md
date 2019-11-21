@@ -12,9 +12,18 @@ Users can keep track of all the movies they have watched, and separate the speci
 - **sign up** - As a user I want to sign up on the webpage so that I can see all the events that I could attend
 - **login** - As a user I want to be able to log in on the webpage so that I can get back to my account
 - **logout** - As a user I want to be able to log out from the webpage so that I can make sure no one will access my account
+- **searchpage** - As a user I want to be able to search the page for movies. So that I can make add movies to my list and view detils of each movie. 
+- **profilepage** - As a user I want to be able to create and update my personal profile and display my movie stats, lists, profile picture and information. 
+- **settingspage** - As a user I want to be able to edit my profile, change my profile picture.
+- **movieslistspage** - As a user I want to be able to add movies to "Want to see" list. "Seen" list.
+- **moviesdetailspage** - As a user i want to be able to view detail information about a specific movies.
 
 
 
+- **events list** - As a user I want to see all the events available so that I can choose which ones I want to attend
+- **events create** - As a user I want to create an event so that I can invite others to attend
+- **events detail** - As a user I want to see the event details and attendee list of one event so that I can decide if I want to attend 
+- **event attend** - As a user I want to be able to attend to event so that the organizers can count me in
 
 ## Backlog
 
@@ -27,10 +36,12 @@ User profile:
 - list of events created by the user
 - list events the user is attending
 
-Geo Location:
-- add geolocation to events when creating
-- show event in a map in event detail page
-- show all events in a map in the event list page
+Follow friends:
+- views other useres movie lists
+- make recomendations
+
+Movies lists:
+- possibility to make a custom list of movies
 
 Homepage
 - ...
