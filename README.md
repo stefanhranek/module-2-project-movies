@@ -2,7 +2,7 @@
 
 ## Description
 
-Describe your project in one/two lines.
+Users can keep track of all the movies they have watched, and separate the special ones they love into a separate list that can be displayed on their user profile for friends to see. They can customize profile to their liking & display information relating to movies.
  
 ## User Stories
 
@@ -12,6 +12,8 @@ Describe your project in one/two lines.
 - **sign up** - As a user I want to sign up on the webpage so that I can see all the events that I could attend
 - **login** - As a user I want to be able to log in on the webpage so that I can get back to my account
 - **logout** - As a user I want to be able to log out from the webpage so that I can make sure no one will access my account
+
+
 - **events list** - As a user I want to see all the events available so that I can choose which ones I want to attend
 - **events create** - As a user I want to create an event so that I can invite others to attend
 - **events detail** - As a user I want to see the event details and attendee list of one event so that I can decide if I want to attend 
