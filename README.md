@@ -1,4 +1,4 @@
-# Movie Logggg
+# Movie Log
 
 ## Description
 
