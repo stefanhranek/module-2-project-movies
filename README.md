@@ -97,22 +97,25 @@ year: Number
 User model
  
 ```
+{
 username: String
 password: String
 email: String
 quote: String
 follows: [ ]
+}
 ```
 
 ____ model
 
 ```
+{
 username: String
 password: String
 email: String
 quote: String
 follows: [ ]
-
+}
 ``` 
 
 ## Links
