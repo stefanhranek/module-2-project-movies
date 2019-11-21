@@ -119,7 +119,7 @@ Search:
 | `DELETE`   | `/private/movies-list/` | Private route. Deletes a specifed movie from the current users list. |                                                          |
 | `GET`      | `/private/movie-detail/:id`        | Renders a movie with a specific id and shows a detailed page.|                                                          |
 
-##Partials
+## Partials
 
 Movie card = {
 poster: Img,
