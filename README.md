@@ -124,7 +124,7 @@ attendees: [ObjectId<User>]
 
 ### Trello
 
-[Link to your trello board](https://trello.com) or picture of your physical board
+[https://trello.com/b/I2u4xr68/ironhack-project-2-film-log]
 
 ### Git
 
