@@ -57,6 +57,10 @@ Search:
 - find a movie base of different params e.g. (actor name, director name, year, country, etc)
 
 
+
+
+
+
 ## API Routes (Back-end):
 
 
@@ -80,12 +84,12 @@ Search:
 
 ## Partials
 
+Movie card
 ```
-Movie card = {
-poster: Img,
-name: String,
+poster: Image
+name: String
 year: Number
-}
+
 ```
 
 ## Models
@@ -103,6 +107,11 @@ follows: [ ]
 ____ model
 
 ```
+username: String
+password: String
+email: String
+quote: String
+follows: [ ]
 
 ``` 
 
