@@ -56,47 +56,6 @@ Edit profile:
 Search: 
 - find a movie base of different params e.g. (actor name, director name, year, country, etc)
 
-## ROUTES:
-
-- GET / 
-  - renders the homepage
-- GET /auth/signup
-  - redirects to / if user logged in
-  - renders the signup form (with flash msg)
-- POST /auth/signup
-  - redirects to / if user logged in
-  - body:
-    - username
-    - email
-    - password
-- GET /auth/login
-  - redirects to / if user logged in
-  - renders the login form (with flash msg)
-- POST /auth/login
-  - redirects to / if user logged in
-  - body:
-    - username
-    - password
-- POST /auth/logout
-  - body: (empty)
-
-- GET /events
-  - renders the event list + the create form
-- POST /events/create 
-  - redirects to / if user is anonymous
-  - body: 
-    - name
-    - date
-    - location
-    - description
-- GET /events/:id
-  - renders the event detail page
-  - includes the list of attendees
-  - attend button if user not attending yet
-- POST /events/:id/attend 
-  - redirects to / if user is anonymous
-  - body: (empty - the user is already stored in the session)
-
 
 ## API Routes (Back-end):
 
@@ -121,11 +80,13 @@ Search:
 
 ## Partials
 
+```
 Movie card = {
 poster: Img,
 name: String,
 year: Number
 }
+```
 
 ## Models
 
@@ -139,7 +100,7 @@ quote: String
 follows: [ ]
 ```
 
- model
+____ model
 
 ```
 
