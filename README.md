@@ -115,16 +115,16 @@ Search:
 | `GET`      | `/private/profile`            | Private route. Renders `profile` form view.             |                                                          |
 | `GET`      | `/private/settings`               | Private route. Render the `settings` view.                  |                                                          |
 | `PUT`      | `/private/setings`            | Private route. Sends edit profile info to server and updates user in DB. | { name, quote, [imageUrl] } |
-
-| `GET`     | `/private/movies-list/`           | Private route.Shows a "Want to seen" or "Seen" movies  list.   |                         |
+| `GET`     | `/private/movies-list/`           | Private route.Shows a "Want to seen" or "Seen" movies  list.|                         |
 | `DELETE`   | `/private/movies-list/` | Private route. Deletes a specifed movie from the current users list. |                                                          |
-| `GET`      | `/private/movie-detail/:id`        | Renders a movie with a specific id and shows a detailed page.                              |                                                          |
+| `GET`      | `/private/movie-detail/:id`        | Renders a movie with a specific id and shows a detailed page.|                                                          |
 
 ##Partials
+
 Movie card = {
-poster: img,
-name: string,
-year: number
+poster: Img,
+name: String,
+year: Number
 }
 
 ## Models
@@ -139,15 +139,10 @@ quote: String
 follows: [ ]
 ```
 
-Event model
+ model
 
 ```
-owner: ObjectId<User>
-name: String
-description: String
-date: Date
-location: String
-attendees: [ObjectId<User>]
+
 ``` 
 
 ## Links
@@ -160,7 +155,7 @@ attendees: [ObjectId<User>]
 
 The url to your repository and to your deployed project
 
-[Repository Link](http://github.com)
+[https://github.com/stefanhranek/module-2-project-movies]
 
 [Deploy Link](http://heroku.com)
 
