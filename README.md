@@ -14,10 +14,7 @@ Users can keep track of all the movies they have watched, and separate the speci
 - **logout** - As a user I want to be able to log out from the webpage so that I can make sure no one will access my account
 
 
-- **events list** - As a user I want to see all the events available so that I can choose which ones I want to attend
-- **events create** - As a user I want to create an event so that I can invite others to attend
-- **events detail** - As a user I want to see the event details and attendee list of one event so that I can decide if I want to attend 
-- **event attend** - As a user I want to be able to attend to event so that the organizers can count me in
+
 
 ## Backlog
 
