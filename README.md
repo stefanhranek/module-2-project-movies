@@ -20,10 +20,7 @@ Users can keep track of all the movies they have watched, and separate the speci
 
 
 
-- **events list** - As a user I want to see all the events available so that I can choose which ones I want to attend
-- **events create** - As a user I want to create an event so that I can invite others to attend
-- **events detail** - As a user I want to see the event details and attendee list of one event so that I can decide if I want to attend 
-- **event attend** - As a user I want to be able to attend to event so that the organizers can count me in
+
 
 ## Backlog
 
@@ -43,9 +40,21 @@ Follow friends:
 Movies lists:
 - possibility to make a custom list of movies
 
-Homepage
-- ...
+Events:
+-create posibility for users to host or attande movie watching events. 
+  - **events list** - As a user I want to see all the events available so that I can choose which ones I want to attend 
+  - **events create** - As a user I want to create an event so that I can invite others to attend
+  - **events detail** - As a user I want to see the event details and attendee list of one event so that I can decide if I want to attend 
+  - **event attend** - As a user I want to be able to attend to event so that the organizers can count me in
 
+Edit profile:
+-change email
+-change password
+
+-moving the movie from "Want to see" to "Seen" section
+
+Search: 
+- find a movie base of different params e.g. (actor name, director name, year, country, etc)
 
 ## ROUTES:
 
@@ -95,18 +104,28 @@ Homepage
 
 | **Method** | **Route**                          | **Description**                                              | Request  - Body                                          |
 | ---------- | ---------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------- |
-| `GET`      | `/`                                | Main page route.  Renders home `index` view.                 |                                                          |
+| `GET`      | `/`                                | Log in page route.  Renders home `index` view.                 |                                                          |
 | `GET`      | `/login`                           | Renders `login` form view.                                   |                                                          |
 | `POST`     | `/login`                           | Sends Login form data to the server.                         | { email, password }                                      |
 | `GET`      | `/signup`                          | Renders `signup` form view.                                  |                                                          |
-| `POST`     | `/signup`                          | Sends Sign Up info to the server and creates user in the DB. | {  email, password  }                                    |
-| `GET`      | `/private/edit-profile`            | Private route. Renders `edit-profile` form view.             |                                                          |
-| `PUT`      | `/private/edit-profile`            | Private route. Sends edit-profile info to server and updates user in DB. | { email, password, [firstName], [lastName], [imageUrl] } |
-| `GET`      | `/private/favorites`               | Private route. Render the `favorites` view.                  |                                                          |
-| `POST`     | `/private/favorites/`              | Private route. Adds a new favorite for the current user.     | { name, cuisine, city, }                                 |
-| `DELETE`   | `/private/favorites/:restaurantId` | Private route. Deletes the existing favorite from the current user. |                                                          |
-| `GET`      | `/restaurants`                     | Renders `restaurant-list` view.                              |                                                          |
-| `GET`      | `/restaurants/details/:id`         | Render `restaurant-details` view for the particular restaurant. |                                                          |
+| `POST`     | `/signup`                          | Sends Sign Up info to the server and creates user in the DB. | { name,email, password,password again  }                                    |
+| `GET`      | `/private/home`            | Private route. Renders `home` form view.             |                                                          |
+| `POST`      | `/private/home`            | Sends search info to the server and responds witch a result.            |                                                          |
+| `GET`      | `/private/search-result`            | Render movie card partials based on the query params.            |                                                          |
+| `GET`      | `/private/profile`            | Private route. Renders `profile` form view.             |                                                          |
+| `GET`      | `/private/settings`               | Private route. Render the `settings` view.                  |                                                          |
+| `PUT`      | `/private/setings`            | Private route. Sends edit profile info to server and updates user in DB. | { name, quote, [imageUrl] } |
+
+| `GET`     | `/private/movies-list/`           | Private route.Shows a "Want to seen" or "Seen" movies  list.   |                         |
+| `DELETE`   | `/private/movies-list/` | Private route. Deletes a specifed movie from the current users list. |                                                          |
+| `GET`      | `/private/movie-detail/:id`        | Renders a movie with a specific id and shows a detailed page.                              |                                                          |
+
+##Partials
+Movie card = {
+poster: img,
+name: string,
+year: number
+}
 
 ## Models
 
@@ -115,6 +134,9 @@ User model
 ```
 username: String
 password: String
+email: String
+quote: String
+follows: [ ]
 ```
 
 Event model
