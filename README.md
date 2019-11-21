@@ -86,10 +86,12 @@ Search:
 
 Movie card
 ```
+{
 poster: Image
 name: String
 year: Number
 
+}
 ```
 
 ## Models
