@@ -4,8 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
+var loginRouter = require('./routes/login');
+var signupRouter = require('./routes/signup');
+var homeRouter = require('./routes/private/home');
+var searchRouter = require('./routes/private/search');
+var searchResultsRouter = require('./routes/private/searchResults');
+var movieDetailRouter = require('./routes/private/movieDetail');
+var movieListRouter = require('./routes/private/movieList');
+var profileRouter = require('./routes/private/profile');
+var settingsRouter = require('./routes/private/settings');
 
 var app = express();
 
@@ -19,8 +27,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', loginRouter);
+app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
+app.use('/routes/private/home', homeRouter);
+app.use('/routes/private/search', searchRouter);
+app.use('/routes/private/searchResults', searchResultsRouter);
+app.use('/routes/private/movieDetail', movieDetailRouter);
+app.use('/routes/private/movieList', movieListRouter);
+app.use('/routes/private/profile', profileRouter);
+app.use('/routes/private/settings', settingsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
