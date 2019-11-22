@@ -108,15 +108,21 @@ follows: [ ]
 }
 ```
 
-____ model
+Seen movies model
 
 ```
 {
-username: String
-password: String
-email: String
-quote: String
-follows: [ ]
+movie_id : Strings
+seen_date: Number
+personal_rating: String
+}
+``` 
+
+Want to watch model
+
+```
+{
+movie_id : Strings
 }
 ``` 
 
