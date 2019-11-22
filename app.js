@@ -1,19 +1,19 @@
-var createError  = require('http-errors');
-var express      = require('express');
-var path         = require('path');
-var cookieParser = require('cookie-parser');
-var logger       = require('morgan');
+var createError   = require('http-errors');
+var express       = require('express');
+var path          = require('path');
+var cookieParser  = require('cookie-parser');
+var logger        = require('morgan');
 
 
-var loginRouter         = require('./routes/public/login');
-var signupRouter        = require('./routes/public/signup');
-var homeRouter          = require('./routes/private/home');
-var searchRouter        = require('./routes/private/search');
-var searchResultsRouter = require('./routes/private/searchResults');
-var movieDetailRouter   = require('./routes/private/movieDetail');
-var movieListRouter     = require('./routes/private/movieList');
-var profileRouter       = require('./routes/private/profile');
-var settingsRouter      = require('./routes/private/settings');
+var loginRouter           = require('./routes/public/login');
+var signupRouter          = require('./routes/public/signup');
+var homeRouter            = require('./routes/private/home');
+var searchRouter          = require('./routes/private/search');
+var searchResultsRouter   = require('./routes/private/searchResults');
+var movieDetailRouter     = require('./routes/private/movieDetail');
+var movieListRouter       = require('./routes/private/movieList');
+var profileRouter         = require('./routes/private/profile');
+var settingsRouter        = require('./routes/private/settings');
 
 var app = express();
 
