@@ -30,13 +30,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', loginRouter);
 app.use('/public/login', loginRouter);
 app.use('/public/signup', signupRouter);
-app.use('/routes/private/home', homeRouter);
-app.use('/routes/private/search', searchRouter);
-app.use('/routes/private/searchResults', searchResultsRouter);
-app.use('/routes/private/movieDetail', movieDetailRouter);
-app.use('/routes/private/movieList', movieListRouter);
-app.use('/routes/private/profile', profileRouter);
-app.use('/routes/private/settings', settingsRouter);
+app.use('/private/home', homeRouter);
+app.use('/private/search', searchRouter);
+app.use('/private/searchResults', searchResultsRouter);
+app.use('/private/movieDetail', movieDetailRouter);
+app.use('/private/movieList', movieListRouter);
+app.use('/private/profile', profileRouter);
+app.use('/private/settings', settingsRouter);
 
 
 // catch 404 and forward to error handler
