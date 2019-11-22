@@ -108,6 +108,16 @@ follows: [ ]
 }
 ```
 
+Events model (## backlog)
+ 
+```
+{
+events_name: String
+event_date: Number
+event_location: String
+}
+```
+
 Seen movies model
 
 ```
