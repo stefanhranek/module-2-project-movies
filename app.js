@@ -15,6 +15,8 @@ var movieListRouter       = require('./routes/private/movieList');
 var profileRouter         = require('./routes/private/profile');
 var settingsRouter        = require('./routes/private/settings');
 
+var authRouter = require('./routes/public/auth');
+
 var app = express();
 
 // view engine setup
@@ -37,6 +39,8 @@ app.use('/private/movieDetail', movieDetailRouter);
 app.use('/private/movieList', movieListRouter);
 app.use('/private/profile', profileRouter);
 app.use('/private/settings', settingsRouter);
+
+app.use('/auth',authRouter );
 
 
 // catch 404 and forward to error handler

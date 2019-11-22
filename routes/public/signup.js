@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
     res.render('signup');
 });
 
-//   /* POST signup page. */
+  /* POST signup page. */
 // router.post('/signup', function(req, res, next) {
 //     res.send('signup', { title: 'signup page' });
 // });

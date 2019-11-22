@@ -1,4 +1,23 @@
-<h1>this is the LOGIN page </h1>
+<h1>LOGIN FORM</h1>
 
+<form action='/auth/login' method='POST'>
 
-<h2>nodeMON are you WORKING? woooo!</h2>
+  <label for=''>Username</label>
+  <input type='text' name='username'>
+
+  <label for=''>Password</label>
+  <input type='password' name='password'>
+
+  <button type='submit'>LOGIN</button>
+
+    <p class="account-message">
+      Don't have an account? <a href="/public/signup">Sign up</a>
+    </p>
+
+</form>
+
+{{!-- error message display --}} 
+
+{{#if errorMessage}}
+  <div class="error-message">{{ errorMessage }}</div>
+{{/if}}

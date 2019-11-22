@@ -1,1 +1,28 @@
-<h1>this is the SIGNUP page</h1>
+{{!-- <img src="./public/images/button-icon.png" alt="back-button"> --}}
+
+<h1>Create<br>Account.</h1>
+
+<form action='/auth/signup' method='POST'>
+
+    <label for=''>Username</label>
+    <input type='text' name='username'>
+
+    <label for=''>Email</label>
+    <input type='text' name='email'>
+
+    <label for=''>Password</label>
+    <input type='password' name='password'>
+
+    <label for=''>Password</label>
+    <input type='password' name='password'>
+
+    <p>Password must be at least 8 characters</p>
+
+    <button type='submit'>Sign up</button>
+</form>
+
+{{!-- error message display --}} 
+
+{{#if errorMessage}}
+  <div class="error-message">{{ errorMessage }}</div>
+{{/if}}
