@@ -67,7 +67,7 @@ Search:
 
 | **Method** | **Route**                          | **Description**                                              | Request  - Body                                          |
 | ---------- | ---------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------- |
-| `GET`      | `/`                                | Log in page route.  Renders home `index` view.                 |                                                          |
+| `GET`      | `/`                                | Log in page route.  Renders home `login` view.                 |                                                          |
 | `GET`      | `/login`                           | Renders `login` form view.                                   |                                                          |
 | `POST`     | `/login`                           | Sends Login form data to the server.                         | { email, password }                                      |
 | `GET`      | `/signup`                          | Renders `signup` form view.                                  |                                                          |
@@ -108,15 +108,31 @@ follows: [ ]
 }
 ```
 
-____ model
+Events model (## backlog)
+ 
+```
+{
+events_name: String
+event_date: Number
+event_location: String
+}
+```
+
+Seen movies model
 
 ```
 {
-username: String
-password: String
-email: String
-quote: String
-follows: [ ]
+movie_id : Strings
+seen_date: Number
+personal_rating: String
+}
+``` 
+
+Want to watch model
+
+```
+{
+movie_id : Strings
 }
 ``` 
 
