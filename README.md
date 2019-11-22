@@ -67,7 +67,7 @@ Search:
 
 | **Method** | **Route**                          | **Description**                                              | Request  - Body                                          |
 | ---------- | ---------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------- |
-| `GET`      | `/`                                | Log in page route.  Renders home `index` view.                 |                                                          |
+| `GET`      | `/`                                | Log in page route.  Renders home `login` view.                 |                                                          |
 | `GET`      | `/login`                           | Renders `login` form view.                                   |                                                          |
 | `POST`     | `/login`                           | Sends Login form data to the server.                         | { email, password }                                      |
 | `GET`      | `/signup`                          | Renders `signup` form view.                                  |                                                          |
