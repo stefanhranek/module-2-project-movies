@@ -37,7 +37,7 @@ router.post('/signup', (req, res, next) => {
                     res.redirect('./../private/profile');
                 })
                 .catch(err => {
-                    res.render('/signup', {
+                    res.render('signup', {
                         errorMessage: 'Error while creating username.',
                     });
                 });
@@ -75,7 +75,7 @@ router.post('/login', (req,res,next) => {
             if (passwordCorrect) {
                 req.session.currentUser = userData;
                 res.redirect('/../private/home');
-             
+            
             }
             else {
                 res.render('login', {errorMessage: 'Password is incorrect'});
