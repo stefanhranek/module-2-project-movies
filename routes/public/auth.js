@@ -54,15 +54,15 @@ router.post('/login', (req,res,next) => {
     }
 
     User.findOne( { username })
-        .then(userData => {
-            if (!userData) {
+        .then(user => {
+            if (!user) {
                 res.render('login', {
                     errorMessage: 'Username not found',
                 });
                 return;
             }
 
-            const hashedPasswordFromDB = userData.password;  
+            const hashedPasswordFromDB = user.password;  
 
             const passwordCorrect = bcrypt.compareSync(
                 enteredPassword, 
@@ -70,7 +70,7 @@ router.post('/login', (req,res,next) => {
             );
 
             if (passwordCorrect) {
-                req.session.currentUser = userData;
+                req.session.currentUser = user;
                 res.redirect('/../private/home');
             
             }
