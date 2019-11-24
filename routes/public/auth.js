@@ -8,6 +8,7 @@ const saltRounds = 10;
 // POST - 
 router.post('/signup', (req, res, next) => {
     const { username, password } = req.body;
+// console.log();
 
     if (username === '' || password === '') {
         res.render('signup', {
@@ -18,7 +19,7 @@ router.post('/signup', (req, res, next) => {
 
     User.findOne( { username })
         .then(user => {
-            if (User) {
+            if (user) {
                 res.render('signup', {
                     errorMessage: 'Username already exists',
                 });
