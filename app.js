@@ -5,6 +5,9 @@ var cookieParser  = require('cookie-parser');
 var logger        = require('morgan');
 var mongoose      = require('mongoose');
 var bodyParser    = require('body-parser');
+var session       = require('express-session');
+var MongoStore    = require('connect-mongo')(session);
+
 
 
 mongoose.connect('mongodb://localhost:27017/users', {
@@ -52,9 +55,28 @@ app.use('/private/movieDetail', movieDetailRouter);
 app.use('/private/movieList', movieListRouter);
 app.use('/private/profile', profileRouter);
 app.use('/private/settings', settingsRouter);
-
 app.use('/auth',authRouter );
 
+app.use((req, res, next) => {
+  app.locals.currentUser = req.session.currentUser;
+  next();
+});
+
+app.use(session({
+  secret: "basic-auth-secret",
+  resave: true,
+  saveUninitialized: true,
+  cookie: { maxAge: 60000 },
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection,
+    ttl: 24 * 60 * 60 // 1 day
+  })
+}));
+
+app.use((req, res, next) => {
+  app.locals.currentUser = req.session.currentUser;
+  next();
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -31,6 +31,7 @@ router.post('/signup', (req, res, next) => {
 
             User.create( {username, password: hashedPassword} )
                 .then( user => {
+                    res.session.currentUser = user;
                     res.redirect('./../private/profile');
                 })
                 .catch(err => {
