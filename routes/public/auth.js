@@ -1,10 +1,6 @@
 const express = require('express');
 const router  = express.Router();
-
-// const zxcvbn  = require('zxcvbn');
-const User    = require('./../../Models/Users');
-
-// Require bcrypt
+const User    = require('../../Models/User');
 const bcrypt     = require('bcrypt');
 const saltRounds = 10;
 
@@ -22,7 +18,7 @@ router.post('/signup', (req, res, next) => {
 
     User.findOne( { username })
         .then(user => {
-            if (user) {
+            if (User) {
                 res.render('signup', {
                     errorMessage: 'Username already exists',
                 });
@@ -33,7 +29,7 @@ router.post('/signup', (req, res, next) => {
             const hashedPassword = bcrypt.hashSync( password, salt );
 
             User.create( {username, password: hashedPassword} )
-                .then( newUserObj => {
+                .then( user => {
                     res.redirect('./../private/profile');
                 })
                 .catch(err => {
