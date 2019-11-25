@@ -1,13 +1,13 @@
 var express = require('express');
-var router  = express.Router();
+var router = express.Router();
 
 
 // GET '/public/signup'
 router.get('/', function(req, res, next) {
-    res.render('signup');
+    res.render('signup', { layout: 'layoutPublic.hbs' });
 });
 
-  /* POST signup page. */
+/* POST signup page. */
 // router.post('/signup', function(req, res, next) {
 //     res.send('signup', { title: 'signup page' });
 // });

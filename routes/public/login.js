@@ -1,9 +1,9 @@
 var express = require('express');
-var router  = express.Router();
+var router = express.Router();
 
 /* GET login page. */
 router.get('/', function(req, res, next) {
-  res.render('login', { title: 'Login page' });
+    res.render('login', { layout: 'layoutPublic.hbs' });
 });
 
 // router.get('/login', function(req, res, next) {

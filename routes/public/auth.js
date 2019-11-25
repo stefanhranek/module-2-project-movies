@@ -1,23 +1,23 @@
 const express = require('express');
-const router  = express.Router();
-const User    = require('../../Models/User');
-const bcrypt     = require('bcrypt');
+const router = express.Router();
+const User = require('../../Models/User');
+const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 
 // POST - auth/signup
 router.post('/signup', (req, res, next) => {
     const { username, password } = req.body;
-// console.log();
+    // console.log();
 
     if (username === '' || password === '') {
         res.render('signup', {
-            errorMessage: 'Provide username and password', 
+            errorMessage: 'Provide username and password',
         });
         return;
     }
 
-    User.findOne( { username })
+    User.findOne({ username })
         .then(user => {
             if (user) {
                 res.render('signup', {
@@ -27,10 +27,10 @@ router.post('/signup', (req, res, next) => {
             }
 
             const salt = bcrypt.genSaltSync(saltRounds);
-            const hashedPassword = bcrypt.hashSync( password, salt );
+            const hashedPassword = bcrypt.hashSync(password, salt);
 
-            User.create( {username, password: hashedPassword} )
-                .then( user => {
+            User.create({ username, password: hashedPassword })
+                .then(user => {
                     req.session.currentUser = user;
                     res.redirect('./../private/profile');
                 })
@@ -46,15 +46,15 @@ router.post('/signup', (req, res, next) => {
 
 
 //POST auth/login
-router.post('/login', (req,res,next) => {
-    const {username, password: enteredPassword} = req.body;
+router.post('/login', (req, res, next) => {
+    const { username, password: enteredPassword } = req.body;
 
-    if ( username === '' || enteredPassword === '' ) {
-        res.render('login', {errorMessage: 'Provide username and password' });
+    if (username === '' || enteredPassword === '') {
+        res.render('login', { errorMessage: 'Provide username and password' });
         return
     }
 
-    User.findOne( { username })
+    User.findOne({ username })
         .then(user => {
             if (!user) {
                 res.render('login', {
@@ -63,52 +63,34 @@ router.post('/login', (req,res,next) => {
                 return;
             }
 
-            const hashedPasswordFromDB = user.password;  
+            const hashedPasswordFromDB = user.password;
 
             const passwordCorrect = bcrypt.compareSync(
-                enteredPassword, 
+                enteredPassword,
                 hashedPasswordFromDB,
             );
 
             if (passwordCorrect) {
                 console.log(user);
                 console.log('THIS IS THE SESSION', req.session);
-                
+
                 req.session.currentUser = user;
                 res.redirect('/../private/home');
-            
-            }
-            else {
-                res.render('login', {errorMessage: 'Password is incorrect'});
+
+            } else {
+                res.render('login', { errorMessage: 'Password is incorrect' });
             }
         })
         .catch(err => console.log(err));
 
-        
+
 });
 
 /// GET logout 
-router.get('/logout', (req,res,next) => {
+router.get('/logout', (req, res, next) => {
     req.session.destroy(err => {
-        res.render('index', {message: 'Logged out ! Bye'})
+        res.render('index', { message: 'Logged out ! Bye' })
     });
 });
 
-module.exports = router; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+module.exports = router;

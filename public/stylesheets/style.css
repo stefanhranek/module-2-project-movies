@@ -105,11 +105,10 @@
             display: block;
         }
         
-        body {
-            line-height: 1;
-            padding: 25px 25px;
-            background: #f2f2f2;
-            font-family: 'Open Sans', sans-serif;
+        @media (min-width: 600px) {
+            body {
+                background-color: chartreuse;
+            }
         }
         
         ol,
@@ -137,19 +136,75 @@
         /*///////////////////////////
  ///// END OF CSS RESET //////
 ///////////////////////////*/
-<<<<<<< HEAD
+        /*/////////////////////////////////////////////////////
+//////////// GENERAL ELEMENT ATRIBUTES ///////////////
+/////////////////////////////////////////////////////*/
+        
+        body {
+            line-height: 1;
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+            background-color: rgb(0, 0, 0);
+            font-size: 30px;
+        }
+        
+        h1 {
+            font-size: 3em;
+        }
+        
+        h2 {
+            font-size: 5em;
+        }
+        
+        p {
+            font-size: 1em;
+        }
+        
+        label {
+            font-size: 2em;
+        }
+        
+        input {
+            width: 500px;
+            height: 50px;
+            font-size: 1.5em;
+        }
+        
+        button {
+            padding: 0.5px;
+            background-color: rgb(255, 238, 1);
+            font-size: 1.5em;
+            ;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        /*////////// CLASSES /////////////////*/
         
         .header {
             display: flex;
         }
         
-        h2 {
-            font-size: 30px;
+        .nav-bar {
+            /* position: absolute; */
+            position: sticky;
+            bottom: 0px;
+            /* left: 8%; */
+            /* margin: 25px; */
+            font-size: 2em;
+            background: rgb(116, 116, 116);
+            width: 100%;
+        }
+        
+        .nav-bar a {
+            margin: 10px;
         }
         
         .profile-pic img {
             width: 200px;
-            height: auto;
+            height: 200px;
         }
         
         .bio {
@@ -161,6 +216,7 @@
         
         .main {
             padding: 50px 0 0 0;
+            width: 100%;
         }
         
         .section {
@@ -170,6 +226,10 @@
         .list img {
             width: 250px;
             padding: 10px;
+        }
+        
+        .list {
+            justify-content: center;
         }
         
         .movie-info {
@@ -234,103 +294,9 @@
         }
         
         .cast-info span {
-=======
-    
-    .header {
-        display: flex;
-    }
-    
-    h2 {
-        font-size: 30px;
-    }
-    
-    .profile-pic img {
-        width: 200px;
-        height: auto;
-    }
-    
-    .bio {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 0 0 20px 0;
-    }
-    
-    .main {
-        padding: 50px 0 0 0;
-    }
-    
-    .section {
-        padding: 0 0 30px 0;
-    }
-    
-    .list img {
-        width: 250px;
-        padding: 10px;
-    }
-    
-    .movie-info {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 20px;
-    }
-    
-    .movie-info span {
-        padding-right: 10px;
-    }
-    
-    .movie-plot {
-        padding-bottom: 10px;
-    }
-    
-    .cast-info {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .search {
-        width: 100%;
-        position: relative;
-        display: flex;
-    }
-    
-    .searchTerm {
-        width: 100%;
-        border: 3px solid #00B4CC;
-        border-right: none;
-        padding: 5px;
-        height: 20px;
-        border-radius: 5px 0 0 5px;
-        outline: none;
-        color: #9DBFAF;
-    }
-    
-    .searchTerm:focus {
-        color: #00B4CC;
-    }
-    
-    .searchButton {
-        width: 40px;
-        height: 36px;
-        border: 1px solid #00B4CC;
-        background: #00B4CC;
-        text-align: center;
-        color: #fff;
-        border-radius: 0 5px 5px 0;
-        cursor: pointer;
-        font-size: 20px;
-    }
-    /*Resize the wrap to see the search bar change!*/
-    
-    .wrap {
-        width: 30%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-	}
-
-	.cast-info span {
->>>>>>> d582b7a439ed366e080d70e9e137f17c4ae97587
             padding-bottom: 10px;
+        }
+        
+        .sign-up a {
+            color: black;
         }
