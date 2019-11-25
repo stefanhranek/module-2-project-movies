@@ -189,6 +189,7 @@
         
         .nav-bar {
             /* position: absolute; */
+            position: -webkit- sticky;
             position: sticky;
             bottom: 0px;
             /* left: 8%; */
