@@ -230,6 +230,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        .cast-info span {
+	}
+
+	.cast-info span {
             padding-bottom: 10px;
         }

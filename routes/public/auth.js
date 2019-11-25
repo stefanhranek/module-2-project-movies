@@ -5,7 +5,7 @@ const bcrypt     = require('bcrypt');
 const saltRounds = 10;
 
 
-// POST - 
+// POST - auth/signup
 router.post('/signup', (req, res, next) => {
     const { username, password } = req.body;
 // console.log();
@@ -31,7 +31,7 @@ router.post('/signup', (req, res, next) => {
 
             User.create( {username, password: hashedPassword} )
                 .then( user => {
-                    res.session.currentUser = user;
+                    req.session.currentUser = user;
                     res.redirect('./../private/profile');
                 })
                 .catch(err => {
