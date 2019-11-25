@@ -137,7 +137,6 @@
         /*///////////////////////////
  ///// END OF CSS RESET //////
 ///////////////////////////*/
-<<<<<<< HEAD
         
         .header {
             display: flex;
@@ -233,9 +232,6 @@
             transform: translate(-50%, -50%);
         }
         
-        .cast-info span {
-=======
-    
     .header {
         display: flex;
     }
@@ -331,6 +327,5 @@
 	}
 
 	.cast-info span {
->>>>>>> d582b7a439ed366e080d70e9e137f17c4ae97587
             padding-bottom: 10px;
         }
