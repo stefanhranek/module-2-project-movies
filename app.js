@@ -8,6 +8,18 @@ var bodyParser    = require('body-parser');
 var session       = require('express-session');
 var MongoStore    = require('connect-mongo')(session);
 
+var loginRouter           = require('./routes/public/login');
+var signupRouter          = require('./routes/public/signup');
+var homeRouter            = require('./routes/private/home');
+var searchRouter          = require('./routes/private/search');
+var searchResultsRouter   = require('./routes/private/searchResults');
+var movieDetailRouter     = require('./routes/private/movieDetail');
+var movieListRouter       = require('./routes/private/movieList');
+var profileRouter         = require('./routes/private/profile');
+var settingsRouter        = require('./routes/private/settings');
+var app = express();
+
+var authRouter = require('./routes/public/auth');
 
 
 mongoose.connect('mongodb://localhost:27017/users', {
@@ -18,32 +30,34 @@ mongoose.connect('mongodb://localhost:27017/users', {
 });
 
 
-var loginRouter           = require('./routes/public/login');
-var signupRouter          = require('./routes/public/signup');
-var homeRouter            = require('./routes/private/home');
-var searchRouter          = require('./routes/private/search');
-var searchResultsRouter   = require('./routes/private/searchResults');
-var movieDetailRouter     = require('./routes/private/movieDetail');
-var movieListRouter       = require('./routes/private/movieList');
-var profileRouter         = require('./routes/private/profile');
-var settingsRouter        = require('./routes/private/settings');
+app.use(logger('dev'));
 
-var authRouter = require('./routes/public/auth');
-
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+
+// session
+app.use(
+  session({
+    secret: "basic-auth-secret",
+    resave: true,
+    saveUninitialized: true,
+    cookie: { maxAge: 60000 },
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60 // 1 day
+    })
+  }));
+  
+  app.use(cookieParser());
 
 app.use('/', loginRouter);
 app.use('/public/login', loginRouter);
@@ -57,26 +71,13 @@ app.use('/private/profile', profileRouter);
 app.use('/private/settings', settingsRouter);
 app.use('/auth',authRouter );
 
-app.use((req, res, next) => {
-  app.locals.currentUser = req.session.currentUser;
-  next();
-});
 
-app.use(session({
-  secret: "basic-auth-secret",
-  resave: true,
-  saveUninitialized: true,
-  cookie: { maxAge: 60000 },
-  store: new MongoStore({
-    mongooseConnection: mongoose.connection,
-    ttl: 24 * 60 * 60 // 1 day
-  })
-}));
 
-app.use((req, res, next) => {
-  app.locals.currentUser = req.session.currentUser;
-  next();
-});
+  // app.use((req, res, next) => {
+  //   app.locals.currentUser = req.session.currentUser;
+  //   next();
+  // });
+  
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

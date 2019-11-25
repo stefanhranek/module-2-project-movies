@@ -71,6 +71,9 @@ router.post('/login', (req,res,next) => {
             );
 
             if (passwordCorrect) {
+                console.log(user);
+                console.log('THIS IS THE SESSION', req.session);
+                
                 req.session.currentUser = user;
                 res.redirect('/../private/home');
             
