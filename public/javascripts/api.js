@@ -28,8 +28,11 @@ getMovieForm.addEventListener('submit', function(e) {
 
             let htmlString = "";
             movies.forEach(function(movie) {
-                htmlString += `<h2>${movie.title}</h2>`
-                
+                htmlString += `
+                <div class="movie-search-query">
+                <a href="/private/movieDetail"><h2>${movie.title}</a> (${movie.release_date.slice(0,4)})</h2> 
+                  </div>`
+
             })
             console.log("THIS IS THE STRING", htmlString);
             resultList.innerHTML = htmlString;
