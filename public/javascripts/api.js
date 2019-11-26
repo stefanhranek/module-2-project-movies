@@ -3,7 +3,9 @@ const getMovieForm = document.querySelector('#get-movie-form');
 // Select sections that hold the forms
 const getIdSection = document.querySelector('#get-movie-section');
 
-const movieTitle = document.querySelector('.get-info')
+const movieTitle = document.querySelector('.get-info');
+
+
 
 
 
@@ -34,7 +36,7 @@ getMovieForm.addEventListener('submit', function(e) {
             movies.forEach(function(movie) {
                 htmlString += `
                 <div class="movie-search-query">
-                <h2 class='movie-title' >${movie.title} (${movie.release_date.slice(0,4)})</h2> 
+            <h2 class='movie-title' >${movie.title} (${movie.release_date.slice(0,4)})</h2>
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}"/>
                </div>`
 
@@ -53,3 +55,12 @@ getMovieForm.addEventListener('submit', function(e) {
         })
         .catch(err => console.log(err));
 });
+
+
+random.addEventListener('click', function() {
+
+
+    axios.get()
+        .then(response => console.log('randooom'))
+
+})
