@@ -1,25 +1,29 @@
-{{!-- <img src="./public/images/button-icon.png" alt="back-button"> --}}
+{{!-- <img src="./../public/images/back-icon.png" alt="back-button"> --}}
 
-<h1>Create<br>Account.</h1>
+<div class='signup-page-wrapper'>
+  <a class= 'back-arrow-icon' href="/public/login"><img src="/images/thin-back-icon.png" alt="back-button"></a>
+  <h1 class='signup-header'>Create<br>Account.</h1>
 
-<form action='/auth/signup' method='POST'>
+  <form class='signup-form-wrapper' action='/auth/signup' method='POST'>
+    <div class='signup-form-section-wrapper'>
+      <label class='form-label' for=''>Name</label>
+      <input type='text' name='username'>
+    </div>
 
-    <label for=''>Username</label>
-    <input type='text' name='username'>
+    <div class='signup-form-section-wrapper'>
+      <label class='form-label' for=''>Email</label>
+      <input type='text' name='email'>
+    </div>
 
-    <label for=''>Email</label>
-    <input type='text' name='email'>
+    <div class='signup-form-section-wrapper'>
+      <label class='form-label' for=''>Password</label>
+      <input class='password-input-style' type='password' name='password'> {{!-- backlog: include show pass toggle --}}
+      <p class='form-label-password-bottom'>Password must be at least 8 characters</p>
+    </div>
 
-    <label for=''>Password</label>
-    <input type='password' name='password'>
-
-    <label for=''>Password</label>
-    <input type='password' name='retype-password'>
-
-    <p>Password must be at least 8 characters</p>
-
-    <button type='submit'>Sign up</button>
-</form>
+      <button class='signup-button' type='submit'>Sign up</button>
+  </form>
+</div>
 
 {{!-- error message display --}} 
 

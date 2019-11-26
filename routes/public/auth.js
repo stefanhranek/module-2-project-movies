@@ -11,7 +11,8 @@ router.post('/signup', (req, res, next) => {
     // console.log();
 
     if (username === '' || password === '') {
-        res.render('signup', {
+        res.render('signup', { 
+            layout: 'layoutPublic.hbs',
             errorMessage: 'Provide username and password',
         });
         return;
@@ -21,6 +22,7 @@ router.post('/signup', (req, res, next) => {
         .then(user => {
             if (user) {
                 res.render('signup', {
+                    layout: 'layoutPublic.hbs',
                     errorMessage: 'Username already exists',
                 });
                 return;
@@ -36,6 +38,7 @@ router.post('/signup', (req, res, next) => {
                 })
                 .catch(err => {
                     res.render('signup', {
+                        layout: 'layoutPublic.hbs',
                         errorMessage: 'Error while creating username.',
                     });
                 });
@@ -50,7 +53,9 @@ router.post('/login', (req, res, next) => {
     const { username, password: enteredPassword } = req.body;
 
     if (username === '' || enteredPassword === '') {
-        res.render('login', { errorMessage: 'Provide username and password' });
+        res.render('login', {
+            layout: 'layoutPublic.hbs',
+            errorMessage: 'Provide username and password' });
         return
     }
 
@@ -58,6 +63,7 @@ router.post('/login', (req, res, next) => {
         .then(user => {
             if (!user) {
                 res.render('login', {
+                    layout: 'layoutPublic.hbs',
                     errorMessage: 'Username not found',
                 });
                 return;
@@ -78,7 +84,9 @@ router.post('/login', (req, res, next) => {
                 res.redirect('/../private/home');
 
             } else {
-                res.render('login', { errorMessage: 'Password is incorrect' });
+                res.render('login', {
+                    layout: 'layoutPublic.hbs',
+                    errorMessage: 'Password is incorrect' });
             }
         })
         .catch(err => console.log(err));

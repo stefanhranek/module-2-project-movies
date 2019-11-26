@@ -1,4 +1,5 @@
-        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+		@import url(//db.onlinewebfonts.com/c/a739af61caedee177335ac8397fba9e2?family=Klarissa);
         /* css reset */
         
         html,
@@ -133,11 +134,12 @@
             border-collapse: collapse;
             border-spacing: 0;
         }
-        /*///////////////////////////
+  /*///////////////////////////
  ///// END OF CSS RESET //////
 ///////////////////////////*/
-        /*/////////////////////////////////////////////////////
-//////////// GENERAL ELEMENT ATRIBUTES ///////////////
+
+/*/////////////////////////////////////////////////////
+//////////// GENERAL ELEMENT ATTRIBUTES ///////////////
 /////////////////////////////////////////////////////*/
         
         body {
@@ -149,7 +151,9 @@
         }
         
         h1 {
-            font-size: 3em;
+			font-size: 3.5em;
+			font-family: Klarissa;
+			letter-spacing: 1.75px;
         }
         
         h2 {
@@ -164,7 +168,7 @@
             font-size: 2em;
         }
         
-        input {
+        input, textarea {
             width: 500px;
             height: 50px;
             font-size: 1.5em;
@@ -172,9 +176,8 @@
         
         button {
             padding: 0.5px;
-            background-color: rgb(255, 238, 1);
+            background-color: #81b6b4;
             font-size: 1.5em;
-            ;
         }
         
         a {
@@ -398,4 +401,139 @@
         
         .sign-up a {
             color: black;
-        }
+		}
+		
+
+
+
+		  /*//////////////////////
+		 /////Stefan's edits/////
+		//////////////////////*/
+
+
+		/* Bottom nav sticky */
+
+		.navbar {
+			overflow: hidden;
+			background-color: #333;  
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			height:8%;
+		}
+
+		.navbar a {
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+
+
+		/* Login page */
+
+		.login-page-wrapper {
+			margin: 8%;
+		}
+
+
+		/* Sign up page */
+
+		.signup-page-wrapper {
+
+			display: flex;
+			flex-direction: column;;
+			margin: 8%;
+			font-family: 'Open Sans';
+		}
+
+		.back-arrow-icon {
+			padding: 10% 0 15% 0;
+			height: 20px;
+		}
+
+		.back-arrow-icon img {
+			height: 60px;
+			width: auto;
+		}
+
+		.signup-header {
+			padding: 5% 0 15% 0;
+			line-height: 100px;
+		}
+
+		.signup-form-wrapper {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.signup-form-section-wrapper {
+			display: flex;
+			flex-direction: column;
+			padding: 10% 0 8% 0;
+		}
+
+		.signup-form-section-wrapper input {
+			border: 0;
+			outline: 0;
+			border-bottom: 4px solid grey;
+			color: white;
+			background: black;
+			width: 85%;
+			height: 100px;
+			caret-color: red;
+			letter-spacing: 1.75px;
+		}
+
+		.form-label {
+			font-size: 30px;
+			color: grey;
+			letter-spacing: 1.5px;
+		}
+
+		.password-input-style {
+			padding-top: 5px;
+			font-size: 90px;
+			letter-spacing: 10px;
+		}
+
+		.form-label-password-bottom {
+			color: grey;
+			padding: 5% 0 13% 0;
+			font-size: .9em;
+			letter-spacing: 1.5px;
+		}
+
+		.signup-button {
+			padding: 30px;
+			color: white;
+			font-weight: bolder;
+			font-size: 1em;
+			border-radius: 22px;
+			width: 95%;
+			/* button background color is set in 'button' style near top */
+		}
+
+		/* Color-changing caret styler */
+
+		@keyframes rainbow {
+			0% { caret-color: red; }
+			20% { caret-color: orange; }
+			40% { caret-color: yellow; }
+			60% { caret-color: green; }
+			80% { caret-color: blue; }
+			100% { caret-color: purple; }
+		}
+		
+		input {
+			width:100%;
+			caret-color: red;
+			display: block;
+		}
+		
+		input:focus {
+			animation: 2s infinite rainbow;
+		}

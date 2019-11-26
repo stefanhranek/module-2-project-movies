@@ -1,22 +1,23 @@
 
+<div class='login-page-wrapper'>
 
-<h1>LOGIN FORM</h1>
+  <h1 class='login-header'>Login</h1>
 
-<form action='/auth/login' method='POST'>
+  <form class='login-form-wrapper' action='/auth/login' method='POST'>
+    <label for=''>Username</label>
+    <input type='text' name='username'>
 
-  <label for=''>Username</label>
-  <input type='text' name='username'>
+    <label for=''>Password</label>
+    <input type='password' name='password'>
 
-  <label for=''>Password</label>
-  <input type='password' name='password'>
+    <button type='submit'>LOGIN</button>
 
-  <button type='submit'>LOGIN</button>
+      <p class="account-message">
+        Don't have an account? <button class="sign-up"><a href="/public/signup">Sign up</a></button>
+      </p>
+  </form>
 
-    <p class="account-message">
-      Don't have an account? <button class="sign-up"><a href="/public/signup">Sign up</a></button>
-    </p>
-
-</form>
+</div>
 
 {{!-- error message display --}} 
 
