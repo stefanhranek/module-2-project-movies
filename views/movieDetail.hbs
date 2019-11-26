@@ -1,25 +1,23 @@
-
-{{movie}}
 <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="">
 <h2>{{movie.title}}</h2>
 <h5>{{movie.release_date}}</h5>
 
 <div class="movie-info">
-<span>Drama</span>
-<span>2h 17min</span>
-<span>rating 8.9</span>
+<span>Drama</span> {{!-- movie.genres --}}
+<span>{{movie.runtime}}</span>
+<span>{{movie.vote_average}}</span>
 </div>
 
 <div class="movie-plot">
     <span>Plot</span>  <br>
-<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla animi sapiente odit quidem. Reiciendis, libero doloribus a repellat veritatis, consectetur amet enim dolorem nemo quasi numquam molestiae exercitationem eaque obcaecati?</span>
+<span>{{movie.overview}}</span>
 
 </div>
 
 <div class="cast-info">
-<span>Director</span>
-<span>Writer</span>
-<span>Actors</span>
+{{!-- <span>Director</span>
+{{!-- <span>Writer</span> --}}
+<span>Actors</span> --}}
 </div>
 
 <div class="movie-detail-buttons">
