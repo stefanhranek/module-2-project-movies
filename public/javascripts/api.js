@@ -3,6 +3,10 @@ const getMovieForm = document.querySelector('#get-movie-form');
 // Select sections that hold the forms
 const getIdSection = document.querySelector('#get-movie-section');
 
+const movieTitle = document.querySelector('.get-info')
+
+
+
 // `GET - Movie by id`
 
 getMovieForm.addEventListener('submit', function(e) {
@@ -30,8 +34,9 @@ getMovieForm.addEventListener('submit', function(e) {
             movies.forEach(function(movie) {
                 htmlString += `
                 <div class="movie-search-query">
-                <a href="/private/movieDetail"><h2>${movie.title}</a> (${movie.release_date.slice(0,4)})</h2> 
-                  </div>`
+                <h2 class='movie-title' >${movie.title} (${movie.release_date.slice(0,4)})</h2> 
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}"/>
+               </div>`
 
             })
             console.log("THIS IS THE STRING", htmlString);
@@ -45,13 +50,6 @@ getMovieForm.addEventListener('submit', function(e) {
                 inputField => (inputField.value = movie.data[inputField.name]),
             );
 
-            getMovieForm.reset();
-            // Show the form `PATCH - Update a movie`
-            updateSection.style.display = 'block';
-            // Hide the form `GET - Character by id`
-            getIdSection.style.display = 'none';
         })
         .catch(err => console.log(err));
 });
-
-/// axios delete
