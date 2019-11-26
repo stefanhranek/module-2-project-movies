@@ -36,7 +36,7 @@ getMovieForm.addEventListener('submit', function(e) {
                 <div class="movie-search-query">
                 <h2 class='movie-title' >${movie.title} (${movie.release_date.slice(0,4)})</h2> 
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}"/>
-               </div>`
+                </div>`
 
             })
             console.log("THIS IS THE STRING", htmlString);
