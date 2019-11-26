@@ -3,7 +3,9 @@ var router = express.Router();
 
 // GET '/private/profile'
 router.get('/', function(req, res, next) {
-    res.render('profile');
+    console.log('THIS IS THE SESSION', req.session.currentUser);
+
+    res.render('profile', {user:req.session.currentUser});
 });
 
 

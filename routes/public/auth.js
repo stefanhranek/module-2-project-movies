@@ -95,9 +95,10 @@ router.post('/login', (req, res, next) => {
 });
 
 /// GET logout 
+//    /auth/logout
 router.get('/logout', (req, res, next) => {
     req.session.destroy(err => {
-        res.render('index', { message: 'Logged out ! Bye' })
+        res.render('login', { message: 'Logged out ! Bye' })
     });
 });
 
