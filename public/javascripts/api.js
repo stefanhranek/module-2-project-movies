@@ -53,3 +53,48 @@ getMovieForm.addEventListener('submit', function(e) {
         })
         .catch(err => console.log(err));
 });
+
+
+
+
+
+
+
+
+
+
+
+
+// testing
+/*
+
+addMovie: function(req, res) {
+    var apiUrl = [
+        'http://api.themoviedb.org/3/movie/',
+        req.body.id,
+        '?api_key=885dbfba88f11b7023082ad1956f5310'
+    ].join('');
+
+    request({
+        method: 'GET',
+        uri: apiUrl,
+        json: {}
+    },
+    function(error, response, movie) {
+        if (!error) {
+            movie.userId = req.session.userId;
+            movie.watched = false;
+            client
+                .db()
+                .collection('movies')
+                .insert(movie, function(err) {
+                    if (err) {
+                        console.log(err);
+                    }
+                    res.redirect('/');
+                });
+        }
+    });
+
+
+*/
