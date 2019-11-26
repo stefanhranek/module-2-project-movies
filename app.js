@@ -7,6 +7,8 @@ var mongoose      = require('mongoose');
 var bodyParser    = require('body-parser');
 var session       = require('express-session');
 var MongoStore    = require('connect-mongo')(session);
+require('dotenv').config();
+
 
 var loginRouter           = require('./routes/public/login');
 var signupRouter          = require('./routes/public/signup');
@@ -17,6 +19,7 @@ var movieDetailRouter     = require('./routes/private/movieDetail');
 var movieListRouter       = require('./routes/private/movieList');
 var profileRouter         = require('./routes/private/profile');
 var settingsRouter        = require('./routes/private/settings');
+
 
 var app = express();
 
