@@ -23,7 +23,8 @@ var app = express();
 var authRouter = require('./routes/public/auth');
 
 
-mongoose.connect('mongodb://localhost:27017/users', {
+
+mongoose.connect(process.env.MONGODB_URI, {
   keepAlive: true,
   useNewUrlParser   : true,
   useUnifiedTopology: true,
