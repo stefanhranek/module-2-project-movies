@@ -1,4 +1,3 @@
-// Select all the forms
 const getMovieForm = document.querySelector('#get-movie-form');
 // Select sections that hold the forms
 const getIdSection = document.querySelector('#get-movie-section');
@@ -7,13 +6,13 @@ const movieTitle = document.querySelector('.get-info');
 
 
 
-
-
-// `GET - Movie by id`
-
 getMovieForm.addEventListener('submit', function(e) {
     // Prevent the form reloading of the page
     e.preventDefault();
+
+
+
+    console.log('I am hereeee');
 
     // Get the id of the movie from the input field
     const name = document.querySelector('#movie-name').value;
@@ -76,59 +75,6 @@ getMovieForm.addEventListener('submit', function(e) {
 
             })
 
-
-            // Populate each empty `inputField.value` with the 
-            // corresponding data from the response object `movie.data`
-            inputElements.forEach(
-                inputField => (inputField.value = movie.data[inputField.name]),
-            );
-
         })
         .catch(err => console.log(err));
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-// testing
-/*
-
-addMovie: function(req, res) {
-    var apiUrl = [
-        'http://api.themoviedb.org/3/movie/',
-        req.body.id,
-        '?api_key=885dbfba88f11b7023082ad1956f5310'
-    ].join('');
-
-    request({
-        method: 'GET',
-        uri: apiUrl,
-        json: {}
-    },
-    function(error, response, movie) {
-        if (!error) {
-            movie.userId = req.session.userId;
-            movie.watched = false;
-            client
-                .db()
-                .collection('movies')
-                .insert(movie, function(err) {
-                    if (err) {
-                        console.log(err);
-                    }
-                    res.redirect('/');
-                });
-        }
-    });
-
-
-*/
+})
