@@ -7,13 +7,11 @@ const baseUrl = 'https://api.themoviedb.org/3/movie/';
 
 // GET '/private/profile'
 router.get('/', function(req, res, next) {
-    console.log('Heloooooooo');
 
     const { _id } = req.session.currentUser;
 
     User.findById({ _id })
         .then((userObj) => {
-            console.log(userObj)
             const { moviesToSee, seenMovies } = userObj;
 
             // Take the movieIds from moviesToSee
