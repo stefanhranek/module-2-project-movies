@@ -4,16 +4,20 @@
   <h1 class='login-header'>Login</h1>
 
   <form class='login-form-wrapper' action='/auth/login' method='POST'>
-    <label for=''>Username</label>
-    <input type='text' name='username'>
+    <div class='login-form-section-wrapper'>
+      <label class='form-label' for=''>Username</label>
+      <input type='text' name='username'>
+    </div>
 
-    <label for=''>Password</label>
-    <input type='password' name='password'>
+    <div class='login-form-section-wrapper'>
+      <label class='form-label' for=''>Password</label>
+      <input class='password-input-style' type='password' name='password'>
+    </div>
 
-    <button type='submit'>LOGIN</button>
+    <button class='login-button' type='submit'>Login</button>
 
       <p class="account-message">
-        Don't have an account? <button class="sign-up"><a href="/public/signup">Sign up</a></button>
+        Don't have an account? <button class="log"><a class="sign-up-now-text" href="/public/signup">Sign up now!</a></button>
       </p>
   </form>
 
