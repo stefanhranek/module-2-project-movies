@@ -690,29 +690,37 @@ img.fa.fa-search {
 .now-playing-api-movie-data {
     display: flex;
     flex-direction: row;
-    height: 800px;
+    height: 100%;
     width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .upcoming-movie-data {
     display: flex;
     flex-direction: row;
-    height: 600px;
+    height: 100%;
     width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .trending-movie-data {
     display: flex;
     flex-direction: row;
-    height: 600px;
+    height: 100%;
     width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .api-movie-data {
     display: flex;
     flex-direction: row;
-    height: 400px;
+    height: 300px;
     width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .home-section-heading {
