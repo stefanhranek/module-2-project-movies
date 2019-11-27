@@ -34,7 +34,25 @@ window.addEventListener('load', homeScreen = () => {
                             />
                             </div>`
             })
+
+
             nowPlayingMovies.innerHTML = htmlString;
+
+
+            const movieDetailLinks = document.querySelectorAll('.movie-details-link')
+
+
+            movieDetailLinks.forEach((element) => {
+
+                element.addEventListener('click', (e) => {
+                    const movieId = element.dataset.movieid;
+
+                    // axios.get(`/private/movieDetail/get/${movieId}`)
+                    window.location.assign(`/private/movieDetail/${movieId}`)
+                })
+
+
+            })
 
         })
 
@@ -77,6 +95,21 @@ window.addEventListener('load', homeScreen = () => {
             })
             nowPlayingMovies.innerHTML = htmlString;
 
+            const movieDetailLinks = document.querySelectorAll('.movie-details-link')
+
+
+            movieDetailLinks.forEach((element) => {
+
+                element.addEventListener('click', (e) => {
+                    const movieId = element.dataset.movieid;
+
+                    // axios.get(`/private/movieDetail/get/${movieId}`)
+                    window.location.assign(`/private/movieDetail/${movieId}`)
+                })
+
+
+            })
+
         })
 
 
@@ -116,6 +149,21 @@ window.addEventListener('load', homeScreen = () => {
                             </div>`
             })
             nowPlayingMovies.innerHTML = htmlString;
+
+            const movieDetailLinks = document.querySelectorAll('.movie-details-link')
+
+
+            movieDetailLinks.forEach((element) => {
+
+                element.addEventListener('click', (e) => {
+                    const movieId = element.dataset.movieid;
+
+                    // axios.get(`/private/movieDetail/get/${movieId}`)
+                    window.location.assign(`/private/movieDetail/${movieId}`)
+                })
+
+
+            })
 
         })
 
