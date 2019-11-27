@@ -6,6 +6,8 @@ const UserSchema = new Schema( {
     password    : String,
     email       : String,
     quote       : String,
+    moviesToSee : [Number],
+    seenMovies  : [Number],
     follows     : [],
     image: String
 });

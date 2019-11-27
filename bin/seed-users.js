@@ -11,7 +11,14 @@ mongoose
 
 // STEP 0 - insert documents to ensure that collection exists
 function insertFirst() {
-    const pr1 = User.create({ name: 'Drop', password: 'Drop', email: 'Drop', quote: 'Drop', follows: 'Drop' });
+    const pr1 = User.create({ 
+        name: 'Drop',
+        password: 'Drop',
+        email: 'Drop',
+        quote:'Drop',
+        moviesToSee : [222],
+        seenMovies  : [222],
+        follows: 'Drop' });
 
     Promise.all([pr1])
         .then(() => {
@@ -35,11 +42,32 @@ function dropTheCollections() {
 }
 
 function populateDatabase() {
-    const users = [{
+    const users = [
+        {
             name: 'John',
             password: 'fdsfsdfs',
             email: 'j@j.com',
             quote: 'haa',
+            moviesToSee : [222,223,224,225],
+            seenMovies  : [222,223,224,225],
+            follows: []
+        },
+        {
+            name: 'Sarah',
+            password: 'fdsfsdfs',
+            email: 's@s.com',
+            quote: 'bob\'s sister',
+            moviesToSee : [222,223,224,225],
+            seenMovies  : [222,223,224,225],
+            follows: []
+        },
+        {
+            name: 'Mary',
+            password: 'fdsfsdfs',
+            email: 's@s.com',
+            quote: 'bob\'s sister',
+            moviesToSee : [222,223,224,225],
+            seenMovies  : [222,223,224,225],
             follows: []
         }
 

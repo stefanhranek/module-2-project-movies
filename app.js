@@ -16,6 +16,7 @@ var movieDetailRouter     = require('./routes/private/movieDetail');
 var movieListRouter       = require('./routes/private/movieList');
 var profileRouter         = require('./routes/private/profile');
 var settingsRouter        = require('./routes/private/settings');
+var favoritesRouter       = require('./routes/private/favorites');
 
 var app = express();
 
@@ -70,6 +71,7 @@ app.use('/private/movieList', movieListRouter);
 app.use('/private/profile', profileRouter);
 app.use('/private/settings', settingsRouter);
 app.use('/auth', authRouter );
+app.use('/private/favorites', favoritesRouter);
 
 
   // app.use((req, res, next) => {
