@@ -8,10 +8,9 @@ const saltRounds = 10;
 // POST - auth/signup
 router.post('/signup', (req, res, next) => {
     const { username, password } = req.body;
-    // console.log();
 
     if (username === '' || password === '') {
-        res.render('signup', { 
+        res.render('signup', {
             layout: 'layoutPublic.hbs',
             errorMessage: 'Provide username and password',
         });
@@ -55,7 +54,8 @@ router.post('/login', (req, res, next) => {
     if (username === '' || enteredPassword === '') {
         res.render('login', {
             layout: 'layoutPublic.hbs',
-            errorMessage: 'Provide username and password' });
+            errorMessage: 'Provide username and password'
+        });
         return
     }
 
@@ -77,7 +77,7 @@ router.post('/login', (req, res, next) => {
             );
 
             if (passwordCorrect) {
-                console.log(user);
+                console.log('user', user);
                 console.log('THIS IS THE SESSION', req.session);
 
                 req.session.currentUser = user;
@@ -86,7 +86,8 @@ router.post('/login', (req, res, next) => {
             } else {
                 res.render('login', {
                     layout: 'layoutPublic.hbs',
-                    errorMessage: 'Password is incorrect' });
+                    errorMessage: 'Password is incorrect'
+                });
             }
         })
         .catch(err => console.log(err));

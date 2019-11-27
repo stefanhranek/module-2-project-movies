@@ -26,7 +26,7 @@ getMovieForm.addEventListener('submit', function(e) {
             // const inputNodes = updateForm.querySelectorAll('input');
             // const inputElements = [...inputNodes];
             const movies = response.data.results;
-            console.log(response.data.results);
+            // console.log(response.data.results);
             const resultList = document.querySelector('.movie-results');
 
             let htmlString = "";
