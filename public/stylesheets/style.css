@@ -619,3 +619,66 @@ img.fa.fa-search {
     display: flex;
 }
 
+.movie-detail-buttons button{
+    color: white;
+}
+
+
+/*/////////////////////////
+/////// Home page ////////
+///////////////////////*/
+
+.home-container {
+    display         : flex;
+    flex-direction  : column;
+    justify-content: space-between;
+    padding: 6%;
+}
+
+.home-container h1 {
+    font-size: 23%px;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.top-home {
+    margin-bottom: 50px;
+}
+
+.now-playing-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.now-playing-container h2 {
+    margin-bottom: 5%;
+}
+
+.upcoming-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.now-playing-api-movie-data {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    width: auto;
+}
+
+
+.api-movie-data {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: auto;
+}
+
+.home-section-heading {
+    font-size: 2em;
+}

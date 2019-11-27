@@ -9,7 +9,6 @@
 </ul>
 
 <div class="movie-info">
-<span>Drama</span> {{!-- movie.genres --}}
 <span>{{movie.runtime}}</span>
 <span>{{movie.vote_average}}</span>
 </div>
@@ -21,16 +20,17 @@
 </div>
 
 <div class="cast-info">
-{{!-- <span>Director</span>
+<span>{{director}}</span>
 {{!-- <span>Writer</span> --}}
-<span>Actors</span> --}}
 </div>
 
 <div class="movie-detail-buttons">
-<button>Add to Seen</button>
-<button>Add to Want to Watch</button>
+    <form action='/private/favorites/seen/{{movie.id}}' method='GET'>
+        <button>Add to Seen</button>
+    </form>
 
-
-
-
+    <form action='/private/favorites/next/{{movie.id}}' method='GET'>    
+        <button>Add to 'Want to See'</button>
+    </form>
+    
 </div>
