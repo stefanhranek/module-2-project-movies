@@ -22,14 +22,20 @@
         <h2>Lists</h2>
         <section class="seen-movies-container">
             {{#each seenMovies}}
+            <a href="/private/movieDetail/{{this.data.id}}">
                 <p>{{this.data.title}}</p>
+                </a>
             {{/each}}
         </section>
 
-        <section class="movies-to-see-container">
+        
+        <section class="movies-to-see-container">         
             {{#each moviesToSee}}
-                {{this.data.title}}
+                <a href="/private/movieDetail/{{this.data.id}}">
+                <p>{{this.data.title}}</p>
+                </a>
             {{/each}}
         </section>
+       
     </div>
 </section>
