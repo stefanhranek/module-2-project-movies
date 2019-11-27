@@ -1,28 +1,36 @@
+<img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="">
+<h2>{{movie.title}}</h2>
+<h5>{{movie.release_date}}</h5>
 
-<img src="https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY606_.jpg" alt="">
-<h2>Moonlight</h2>
-<h5>2018</h5>
+<ul>
+    {{#each movie.genres}}
+    <li>{{this.name}}</li>
+    {{/each}}
+</ul>
 
 <div class="movie-info">
-<span>Drama</span>
-<span>2h 17min</span>
-<span>rating 8.9</span>
+<span>{{movie.runtime}}</span>
+<span>{{movie.vote_average}}</span>
 </div>
 
 <div class="movie-plot">
     <span>Plot</span>  <br>
-<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla animi sapiente odit quidem. Reiciendis, libero doloribus a repellat veritatis, consectetur amet enim dolorem nemo quasi numquam molestiae exercitationem eaque obcaecati?</span>
+<span>{{movie.overview}}</span>
 
 </div>
 
 <div class="cast-info">
-<span>Director</span>
-<span>Writer</span>
-<span>Actors</span>
+<span>{{director}}</span>
+{{!-- <span>Writer</span> --}}
 </div>
 
 <div class="movie-detail-buttons">
-<button>Add to Seen</button>
-<button>Add to Want to Watch</button>
+    <form action='/private/favorites/seen/{{movie.id}}' method='GET'>
+        <button>Add to Seen</button>
+    </form>
 
+    <form action='/private/favorites/next/{{movie.id}}' method='GET'>    
+        <button>Add to 'Want to See'</button>
+    </form>
+    
 </div>

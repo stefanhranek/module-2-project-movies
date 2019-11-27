@@ -1,1 +1,27 @@
-<h1>this is the SETTINGS page</h1>
+<h1>Settings</h1>
+
+<form  action='/private/settings' method='POST'>
+    <div class='signup-form-section-wrapper'>
+        <label class='form-label' for=''>Name</label>
+        <input value='{{user.username}}' type='text' name='username'>
+    </div>
+
+<div class='signup-form-section-wrapper'>
+    <label class='form-label' for=''>Email</label>
+    <input value='{{user.email}}' type='text' name='email'>
+</div>
+
+<div class='signup-form-section-wrapper'>
+    <label class='form-label' for=''>Quote</label>
+    <input value='{{user.quote}}' class='password-input-style' type='text' name='quote'> 
+</div>
+
+    <button class='signup-button' type='submit'>Edit profile</button>
+    <br>
+    <br>    
+    <br>
+</form>
+
+    <a href="/auth/logout">
+        <button class='signup-button'>Logout now</button>
+    </a>

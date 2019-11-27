@@ -6,7 +6,10 @@ const UserSchema = new Schema( {
     password    : String,
     email       : String,
     quote       : String,
-    follows     : []
+    moviesToSee : [Number],
+    seenMovies  : [Number],
+    follows     : [],
+    image: String
 });
 
 const User = mongoose.model('User', UserSchema);

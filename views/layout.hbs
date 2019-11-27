@@ -10,12 +10,17 @@
 
     <nav class="navbar">
     <ul>
-        <a class= 'back-arrow-icon' href="/public/login"><img src="/images/thin-back-icon.png" alt="back-button"></a>
+      {{!-- previous change just in case --}}
+        {{!-- <a class= 'back-arrow-icon' href="/public/login"><img src="/images/thin-back-icon.png" alt="back-button"></a>
         <a href="/private/search">Search</a>
-        <a href="/private/profile">Profile</a>
+        <a href="/private/profile">Profile</a> --}}
+        <a class= 'home-icon' href="/private/search"><img src="/images/grey-search-icon.png" alt="search-button"></a>
+        <a class= 'home-icon' href="/private/home"><img src="/images/grey-home-icon.png" alt="home-button"></a>
+        <a class= 'home-icon' href="/private/profile"><img src="/images/grey-profile-icon.png" alt="profile-button"></a>
     </ul>
 </nav>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="/javascripts/api.js"></script>
+    <script type="text/javascript" src="/javascripts/api_homescreen.js"></script>
   </body>
 </html>

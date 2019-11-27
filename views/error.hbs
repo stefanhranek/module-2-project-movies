@@ -1,3 +1,9 @@
-<h1>{{message}}</h1>
-<h2>{{error.status}}</h2>
-<pre>{{error.stack}}</pre>
+<div class="error-page-container">
+    <h1>Aw shit, <br>not again...</h1>
+    <h2>{{message}}</h2>
+    <h3>{{error.status}}</h3>
+    <section class="side-scroll-this">
+        <pre>{{error.stack}}</pre>
+    </section>
+    <a class= 'error-back-arrow-icon' href="/public/login"><img class="error-button-img" src="/images/thin-back-icon.png" alt="back-button"> <p class="error-button-text">Back to the login page.</p></a>
+</div>

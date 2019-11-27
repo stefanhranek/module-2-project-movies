@@ -1,47 +1,35 @@
 <section class="header">
+    <a href="/private/settings">Settings</a>  {{!-- we want this to float right --}}
 
-<div class="profile-pic">
+    <div class="profile-pic">
+        <img src="https://www.skylightsearch.co.uk/wp-content/uploads/2017/01/Hadie-profile-pic-circle-1.png" alt="profile-pic">
+    </div>
 
-<img src="https://www.skylightsearch.co.uk/wp-content/uploads/2017/01/Hadie-profile-pic-circle-1.png" alt="profile-pic">
+    <div class="bio">
+        <h2>{{user.username}}</h2>
+        <p>
+            6891 minutes total watch time
+        </p>
 
-
-</div>
-
-<div class="bio">
-<h2>Marie</h2>
-<a href="/private/settings">Settings</a>
-
-
-
-
-<p>
- 6891 minutes total watch time
-</p>
-
-<p>"Do not try and bend the spoon, that's impossible. Instead, only try to realize the truth...there is no spoon. Then you'll see that it is not the spoon that bends, it is only yourself."</p>
-<p>Last film i saw : "Midsommer"</p>
-
-
-
-</div>
-
+        <p>
+            {{user.quote}}
+        </p>
+    </div>
 </section>
 
 <section class="main">
+    <div class="list">
+        <h2>Lists</h2>
+        <section class="seen-movies-container">
+            {{#each seenMovies}}
+                <p>{{this.data.title}}</p>
+            {{/each}}
+        </section>
 
-<div class="list">
-    <h2>Lists</h2>
-    <img src="https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY606_.jpg" alt="">
-       <img src="https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY606_.jpg" alt="">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY606_.jpg" alt="">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY606_.jpg" alt="">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY606_.jpg" alt="">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY606_.jpg" alt="">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY606_.jpg" alt="">
-    <img src="https://images-na.ssl-images-amazon.com/images/I/71rNJQ2g-EL._SY606_.jpg" alt="">
- 
-
-</div>
-
+        <section class="movies-to-see-container">
+            {{#each moviesToSee}}
+                {{this.data.title}}
+            {{/each}}
+        </section>
+    </div>
 </section>
-

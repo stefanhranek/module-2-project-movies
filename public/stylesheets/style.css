@@ -1,539 +1,771 @@
-		@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-		@import url(//db.onlinewebfonts.com/c/a739af61caedee177335ac8397fba9e2?family=Klarissa);
-        /* css reset */
-        
-        html,
-        body,
-        div,
-        span,
-        applet,
-        object,
-        iframe,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        blockquote,
-        pre,
-        a,
-        abbr,
-        acronym,
-        address,
-        big,
-        cite,
-        code,
-        del,
-        dfn,
-        em,
-        img,
-        ins,
-        kbd,
-        q,
-        s,
-        samp,
-        small,
-        strike,
-        strong,
-        sub,
-        sup,
-        tt,
-        var,
-        b,
-        u,
-        i,
-        center,
-        dl,
-        dt,
-        dd,
-        ol,
-        ul,
-        li,
-        fieldset,
-        form,
-        label,
-        legend,
-        table,
-        caption,
-        tbody,
-        tfoot,
-        thead,
-        tr,
-        th,
-        td,
-        article,
-        aside,
-        canvas,
-        details,
-        embed,
-        figure,
-        figcaption,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        output,
-        ruby,
-        section,
-        summary,
-        time,
-        mark,
-        audio,
-        video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-        }
-        /* HTML5 display-role reset for older browsers */
-        
-        article,
-        aside,
-        details,
-        figcaption,
-        figure,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        section {
-            display: block;
-        }
-        
-        @media (min-width: 600px) {
-            body {
-                background-color: chartreuse;
-            }
-        }
-        
-        ol,
-        ul {
-            list-style: none;
-        }
-        
-        blockquote,
-        q {
-            quotes: none;
-        }
-        
-        blockquote:before,
-        blockquote:after,
-        q:before,
-        q:after {
-            content: '';
-            content: none;
-        }
-        
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-  /*///////////////////////////
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(//db.onlinewebfonts.com/c/a739af61caedee177335ac8397fba9e2?family=Klarissa);
+
+/* css reset */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    body {
+        background-color: chartreuse;
+    }
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*///////////////////////////
  ///// END OF CSS RESET //////
 ///////////////////////////*/
+
 
 /*/////////////////////////////////////////////////////
 //////////// GENERAL ELEMENT ATTRIBUTES ///////////////
 /////////////////////////////////////////////////////*/
-        
-        body {
-            line-height: 1;
-            font-family: 'Open Sans', sans-serif;
-            color: white;
-            background-color: rgb(0, 0, 0);
-            font-size: 30px;
-        }
-        
-        h1 {
-			font-size: 3.5em;
-			font-family: Klarissa;
-			letter-spacing: 1.75px;
-        }
-        
-        h2 {
-            font-size: 5em;
-        }
-        
-        p {
-            font-size: 1em;
-        }
-        
-        label {
-            font-size: 2em;
-        }
-        
-        input, textarea {
-            width: 500px;
-            height: 50px;
-            font-size: 1.5em;
-        }
-        
-        button {
-            padding: 0.5px;
-            background-color: #81b6b4;
-            font-size: 1.5em;
-        }
-        
-        a {
-            text-decoration: none;
-            color: white;
-        }
-        /*////////// CLASSES /////////////////*/
-        
-        .header {
-            display: flex;
-        }
-        
-        .nav-bar {
-            /* position: absolute; */
-            position: -webkit- sticky;
-            position: sticky;
-            bottom: 0px;
-            /* left: 8%; */
-            /* margin: 25px; */
-            font-size: 2em;
-            background: rgb(116, 116, 116);
-            width: 100%;
-        }
-        
-        .nav-bar a {
-            margin: 10px;
-        }
-        
-        .profile-pic img {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .bio {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 0 0 20px 0;
-        }
-        
-        .main {
-            padding: 50px 0 0 0;
-            width: 100%;
-        }
-        
-        .section {
-            padding: 0 0 30px 0;
-        }
-        
-        .list img {
-            width: 250px;
-            padding: 10px;
-        }
-        
-        .list {
-            justify-content: center;
-        }
-        
-        .movie-info {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 20px;
-        }
-        
-        .movie-info span {
-            padding-right: 10px;
-        }
-        
-        .movie-plot {
-            padding-bottom: 10px;
-        }
-        
-        .cast-info {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .search {
-            width: 100%;
-            position: relative;
-            display: flex;
-        }
-        
-        .searchTerm {
-            width: 100%;
-            border: 3px solid #00B4CC;
-            border-right: none;
-            padding: 5px;
-            height: 20px;
-            border-radius: 5px 0 0 5px;
-            outline: none;
-            color: #9DBFAF;
-        }
-        
-        .searchTerm:focus {
-            color: #00B4CC;
-        }
-        
-        .searchButton {
-            width: 40px;
-            height: 36px;
-            border: 1px solid #00B4CC;
-            background: #00B4CC;
-            text-align: center;
-            color: #fff;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        /*Resize the wrap to see the search bar change!*/
-        
-        .wrap {
-            width: 30%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .header {
-            display: flex;
-        }
-        
-        h2 {
-            font-size: 30px;
-        }
-        
-        .profile-pic img {
-            width: 200px;
-            height: auto;
-        }
-        
-        .bio {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 0 0 20px 0;
-        }
-        
-        .main {
-            padding: 50px 0 0 0;
-        }
-        
-        .section {
-            padding: 0 0 30px 0;
-        }
-        
-        .list img {
-            width: 250px;
-            padding: 10px;
-        }
-        
-        .movie-info {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 20px;
-        }
-        
-        .movie-search-query {
-            margin-bottom: 40px;
-        }
-        
-        .movie-info span {
-            padding-right: 10px;
-        }
-        
-        .movie-plot {
-            padding-bottom: 10px;
-        }
-        
-        .cast-info {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .search {
-            width: 100%;
-            position: relative;
-            display: flex;
-        }
-        
-        .searchTerm {
-            width: 100%;
-            border: 3px solid #00B4CC;
-            border-right: none;
-            padding: 5px;
-            height: 20px;
-            border-radius: 5px 0 0 5px;
-            outline: none;
-            color: #9DBFAF;
-        }
-        
-        .searchTerm:focus {
-            color: #00B4CC;
-        }
-        
-        .searchButton {
-            width: 40px;
-            height: 36px;
-            border: 1px solid #00B4CC;
-            background: #00B4CC;
-            text-align: center;
-            color: #fff;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        /*Resize the wrap to see the search bar change!*/
-        
-        .wrap {
-            width: 30%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .cast-info span {
-            padding-bottom: 10px;
-        }
-        
-        .sign-up a {
-            color: black;
-		}
-		
+
+body {
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-family: Klarissa;
+    letter-spacing: 1.75px;
+}
+
+h2 {
+    font-size: 5em;
+}
+
+p {
+    font-size: 1em;
+}
+
+label {
+    font-size: 2em;
+}
+
+input,
+textarea {
+    width: 500px;
+    height: 50px;
+    font-size: 1.5em;
+}
+
+button {
+    padding: 0.5px;
+    background-color: #000000;
+    font-size: 1.5em;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
 
 
+/*////////// CLASSES /////////////////*/
 
-		  /*//////////////////////
-		 /////Stefan's edits/////
-		//////////////////////*/
+.header {
+    display: flex;
+}
+
+.nav-bar {
+    /* position: absolute; */
+    position: -webkit- sticky;
+    position: sticky;
+    bottom: 0px;
+    /* left: 8%; */
+    /* margin: 25px; */
+    font-size: 2em;
+    background: rgb(116, 116, 116);
+    width: 100%;
+}
+
+.nav-bar a {
+    margin: 10px;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 20px 0;
+}
+
+.main {
+    padding: 50px 0 0 0;
+    width: 100%;
+}
+
+.section {
+    padding: 0 0 30px 0;
+}
+
+.list img {
+    width: 250px;
+    padding: 10px;
+}
+
+.list {
+    justify-content: center;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.movie-info span {
+    padding-right: 10px;
+}
+
+.movie-plot {
+    padding-bottom: 10px;
+}
+
+.cast-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus {
+    color: #00B4CC;
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
 
 
-		/* Bottom nav sticky */
+/*Resize the wrap to see the search bar change!*/
 
-		.navbar {
-			overflow: hidden;
-			background-color: #333;  
-			position: fixed;
-			bottom: 0;
-			width: 100%;
-			height:8%;
-		}
+.wrap {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-		.navbar a {
-			float: left;
-			display: block;
-			color: #f2f2f2;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 17px;
-		}
+.header {
+    display: flex;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: auto;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 20px 0;
+}
+
+.main {
+    padding: 50px 0 0 0;
+}
+
+.section {
+    padding: 0 0 30px 0;
+}
+
+.list img {
+    width: 250px;
+    padding: 10px;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.movie-search-query {
+    margin-bottom: 40px;
+}
+
+.movie-info span {
+    padding-right: 10px;
+}
+
+.movie-plot {
+    padding-bottom: 10px;
+}
+
+.cast-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus {
+    color: #00B4CC;
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
 
 
-		/* Login page */
+/*Resize the wrap to see the search bar change!*/
 
-		.login-page-wrapper {
-			margin: 8%;
-		}
+.wrap {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cast-info span {
+    padding-bottom: 10px;
+}
+
+.sign-up a {
+    color: black;
+}
 
 
-		/* Sign up page */
+/*//////////////////////
+/////Stefan's edits/////
+//////////////////////*/
 
-		.signup-page-wrapper {
 
-			display: flex;
-			flex-direction: column;;
-			margin: 8%;
-			font-family: 'Open Sans';
-		}
+/* Bottom nav sticky */
 
-		.back-arrow-icon {
-			padding: 10% 0 15% 0;
-			height: 20px;
-		}
+.navbar {
+    overflow: hidden;
+    background: linear-gradient(360deg, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%, rgb(0, 0, 0, 1) 100%);
+    /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6); */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 60px;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 
-		.back-arrow-icon img {
-			height: 60px;
-			width: auto;
-		}
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    justify-content: space-around;
+    margin-left: 120px;
+    margin-right: 120px;
+}
 
-		.signup-header {
-			padding: 5% 0 15% 0;
-			line-height: 100px;
-		}
+.navbar img {
+    height: 5em;
+}
 
-		.signup-form-wrapper {
-			display: flex;
-			flex-direction: column;
-		}
 
-		.signup-form-section-wrapper {
-			display: flex;
-			flex-direction: column;
-			padding: 10% 0 8% 0;
-		}
+/* Login page */
 
-		.signup-form-section-wrapper input {
-			border: 0;
-			outline: 0;
-			border-bottom: 4px solid grey;
-			color: white;
-			background: black;
-			width: 85%;
-			height: 100px;
-			caret-color: red;
-			letter-spacing: 1.75px;
-		}
+.login-page-wrapper {
+    margin: 8%;
+}
 
-		.form-label {
-			font-size: 30px;
-			color: grey;
-			letter-spacing: 1.5px;
-		}
 
-		.password-input-style {
-			padding-top: 5px;
-			font-size: 90px;
-			letter-spacing: 10px;
-		}
+/* Sign up page */
 
-		.form-label-password-bottom {
-			color: grey;
-			padding: 5% 0 13% 0;
-			font-size: .9em;
-			letter-spacing: 1.5px;
-		}
+.signup-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    ;
+    margin: 8%;
+    font-family: 'Open Sans';
+}
 
-		.signup-button {
-			padding: 30px;
-			color: white;
-			font-weight: bolder;
-			font-size: 1em;
-			border-radius: 22px;
-			width: 95%;
-			/* button background color is set in 'button' style near top */
-		}
+.back-arrow-icon {
+    padding: 10% 0 15% 0;
+    height: 20px;
+}
 
-		/* Color-changing caret styler */
+.back-arrow-icon img {
+    height: 60px;
+    width: auto;
+}
 
-		@keyframes rainbow {
-			0% { caret-color: red; }
-			20% { caret-color: orange; }
-			40% { caret-color: yellow; }
-			60% { caret-color: green; }
-			80% { caret-color: blue; }
-			100% { caret-color: purple; }
-		}
-		
-		input {
-			width:100%;
-			caret-color: red;
-			display: block;
-		}
-		
-		input:focus {
-			animation: 2s infinite rainbow;
-		}
+.signup-header {
+    padding: 5% 0 15% 0;
+    line-height: 100px;
+}
+
+.signup-form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0 8% 0;
+}
+
+.signup-form-section-wrapper input {
+    border: 0;
+    outline: 0;
+    border-bottom: 4px solid grey;
+    color: white;
+    background: black;
+    width: 85%;
+    height: 100px;
+    caret-color: red;
+    letter-spacing: 1.75px;
+}
+
+.form-label {
+    font-size: 30px;
+    color: grey;
+    letter-spacing: 1.5px;
+}
+
+.password-input-style {
+    padding-top: 5px;
+    font-size: 90px;
+    letter-spacing: 10px;
+}
+
+.form-label-password-bottom {
+    color: grey;
+    padding: 5% 0 13% 0;
+    font-size: .9em;
+    letter-spacing: 1.5px;
+}
+
+.signup-button {
+    padding: 30px;
+    color: white;
+    font-weight: bolder;
+    font-size: 1em;
+    border-radius: 22px;
+    width: 95%;
+    /* button background color is set in 'button' style near top */
+}
+
+
+/* Color-changing caret styler */
+
+@keyframes rainbow {
+    0% {
+        caret-color: red;
+    }
+    20% {
+        caret-color: orange;
+    }
+    40% {
+        caret-color: yellow;
+    }
+    60% {
+        caret-color: green;
+    }
+    80% {
+        caret-color: blue;
+    }
+    100% {
+        caret-color: purple;
+    }
+}
+
+input {
+    width: 100%;
+    caret-color: red;
+    display: block;
+}
+
+input:focus {
+    animation: 2s infinite rainbow;
+}
+
+
+/* Search bar */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbar {
+    /* float: right; */
+    background-color: black;
+    color: grey;
+    padding: 16px 10px;
+    width: 22%;
+    border: none;
+    margin-top: 5%;
+    margin-right: 8px;
+    font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: grey solid 2px;
+    transition: 0.3s;
+    letter-spacing: 2px;
+}
+
+.searchbar::placeholder {
+    color: white;
+    font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    /* transition: 0.2s; */
+}
+
+.searchbar:focus {
+    width: 90%;
+    font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: 0.3s;
+    /* Stops the input box from inheriting the styling from the inputs on the request form */
+    border-bottom: white solid 2px;
+    outline: none;
+}
+
+.btn-search {
+    cursor: pointer;
+    color: white;
+    text-decoration: none !important;
+    font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    padding-top: 5px;
+    margin-right: 40px;
+}
+
+img.fa.fa-search {
+    display: flex;
+    padding-left: 15px;
+    height: 1.2em;
+    padding-top: 35px;
+}
+
+#get-movie-form {
+    display: flex;
+}
+
+.movie-detail-buttons button {
+    color: white;
+}
+
+
+/*/////////////////////////
+/////// Home page ////////
+///////////////////////*/
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6%;
+}
+
+.home-container h1 {
+    font-size: 23%px;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.top-home {
+    margin-bottom: 50px;
+}
+
+.now-playing-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.now-playing-container h2 {
+    margin-bottom: 5%;
+}
+
+.upcoming-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.now-playing-api-movie-data {
+    display: flex;
+    flex-direction: row;
+    height: 800px;
+    width: auto;
+}
+
+.upcoming-movie-data {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    width: auto;
+}
+
+.trending-movie-data {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    width: auto;
+}
+
+.api-movie-data {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: auto;
+}
+
+.home-section-heading {
+    font-size: 2em;
+}
+
+/*////////////////////
+/////Error Page//////
+//////////////////*/
+
+.error-page-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15% 10% 15% 10%;
+    justify-content: space-evenly;
+}
+.error-page-container h1 {
+    font-size: 120px;
+    width: 100%;
+}
+
+.error-page-container h2 {
+    font-size: 60px;
+    width: 100%;
+    padding-top:70px
+}
+
+.error-page-container h3 {
+    font-size: 50px;
+    width: 100%;
+    padding-top:60px;
+}
+
+.side-scroll-this {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.error-back-arrow-icon {
+    display: flex;
+    padding-top:5%;
+    height: 5%;
+    width: auto;
+}
+
+.error-button-text {
+    color: white;
+    font-size: 60px;
+    padding-left: 40px;
+}
+
+.error-button-img {
+    height: 80px;
+}
