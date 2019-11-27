@@ -2,6 +2,12 @@
 <h2>{{movie.title}}</h2>
 <h5>{{movie.release_date}}</h5>
 
+<ul>
+    {{#each movie.genres}}
+    <li>{{this.name}}</li>
+    {{/each}}
+</ul>
+
 <div class="movie-info">
 <span>Drama</span> {{!-- movie.genres --}}
 <span>{{movie.runtime}}</span>
