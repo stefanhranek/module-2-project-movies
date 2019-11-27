@@ -460,7 +460,94 @@ h2 {
 /* Login page */
 
 .login-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    ;
     margin: 8%;
+    font-family: 'Open Sans';
+}
+
+.login-header {
+    padding: 15% 0 15% 0;
+    line-height: 100px;
+    letter-spacing: 6px;
+}
+
+.login-form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0 8% 0;
+}
+
+.login-form-section-wrapper input {
+    border: 0;
+    outline: 0;
+    border-bottom: 4px solid grey;
+    color: white;
+    background: black;
+    width: 85%;
+    height: 100px;
+    caret-color: red;
+    letter-spacing: 1.75px;
+}
+
+.form-label {
+    font-size: 30px;
+    color: grey;
+    letter-spacing: 1.5px;
+}
+
+label.form-label {
+    letter-spacing: 5px;
+}
+
+.password-input-style {
+    padding-top: 5px;
+    font-size: 90px;
+    letter-spacing: 10px;
+}
+
+.form-label-password-bottom {
+    color: grey;
+    padding: 5% 0 13% 0;
+    font-size: .9em;
+    letter-spacing: 1.5px;
+}
+
+p.form-label-password-bottom {
+    margin-top: 5px;
+    letter-spacing: 4px;
+}
+
+.login-button {
+    margin-top:50px;
+    padding: 30px;
+    color: black;
+    font-weight: bolder;
+    font-size: 1em;
+    border-radius: 22px;
+    width: 95%;
+    background-color: #ffdc15;
+    /* button background color is set in 'button' style near top */
+}
+
+a.sign-up-now-text {
+    color: #ffdc15;
+    font-size: 30px;
+    padding-top: 50px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+}
+
+p.account-message {
+    margin-top: 50px;
+    letter-spacing: 2px;
+    margin-left: 20px;
 }
 
 
@@ -533,11 +620,12 @@ h2 {
 
 .signup-button {
     padding: 30px;
-    color: white;
+    color: black;
     font-weight: bolder;
     font-size: 1em;
     border-radius: 22px;
     width: 95%;
+    background-color: rgb(255, 220, 21);
     /* button background color is set in 'button' style near top */
 }
 
@@ -776,4 +864,9 @@ img.fa.fa-search {
 
 .error-button-img {
     height: 80px;
+}
+
+div.error-message {
+    text-align: center;
+
 }
