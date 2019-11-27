@@ -11,9 +11,6 @@ getMovieForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
 
-
-    console.log('I am hereeee');
-
     // Get the id of the movie from the input field
     const name = document.querySelector('#movie-name').value;
 
@@ -66,7 +63,6 @@ getMovieForm.addEventListener('submit', function(e) {
 
                 element.addEventListener('click', (e) => {
                     const movieId = element.dataset.movieid;
-                    console.log('THI IS THE MOVIEID', movieId);
 
                     // axios.get(`/private/movieDetail/get/${movieId}`)
                     window.location.assign(`/private/movieDetail/${movieId}`)
