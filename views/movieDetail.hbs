@@ -46,10 +46,10 @@
 
     <form action='/private/favorites/seen/{{movie.id}}' method='GET'>
     {{#if movie.seenMovie }}
-        <button class="signup-button remove">Remove from "Seen"</button>
+        <button class="signup-button">Add to "Seen"</button>
 
     {{else}}
-        <button class="signup-button">Add to "Seen"</button>
+        <button class="signup-button remove">Remove from "Seen"</button>
     {{/if}}
     </form> 
 
@@ -58,9 +58,9 @@
 
     <form action='/private/favorites/next/{{movie.id}}' method='GET'>    
     {{#if movie.movieToSee}}
-        <button class="signup-button remove">Remove from "Want to See"</button>
-    {{else}}
         <button class="signup-button">Add to "Want to See"</button>
+    {{else}}
+        <button class="signup-button remove">Remove from "Want to See"</button>
     {{/if}}
     </form>
     
