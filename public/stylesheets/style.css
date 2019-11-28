@@ -989,3 +989,27 @@ hr.title-hr {
     width: 70%;
     border-top: 2px solid #ffdc15;
 }
+
+
+/*////////////////////////////////////////
+////////////// Profile page /////////////
+//////////////////////////////////////*/
+
+div.profile-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6%;
+    margin-bottom: 17%
+}
+
+.settings-icon {
+    padding: 10% 0 15% 0;
+    height: 20px;
+}
+
+img.settings-icon {
+    height: 60px;
+    width: auto;
+    float: right;
+}

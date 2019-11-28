@@ -1,41 +1,47 @@
-<section class="header">
-    <a href="/private/settings">Settings</a>  {{!-- we want this to float right --}}
-
-    <div class="profile-pic">
-        <img src="https://www.skylightsearch.co.uk/wp-content/uploads/2017/01/Hadie-profile-pic-circle-1.png" alt="profile-pic">
+<div class="profile-page-wrapper">
+    <div class="settings-icon-wrapper">
+        <a class="back-arrow-icon" href="/private/settings"><img class="settings-icon" src="/images/settings-icon.png" alt="back-button"></a>  {{!-- we want this to float right --}}
     </div>
+    <section class="header">
 
-    <div class="bio">
-        <h2>{{user.username}}</h2>
-        <p>
-            6891 minutes total watch time
-        </p>
+        <div class="profile-pic">
+            <img src="https://www.skylightsearch.co.uk/wp-content/uploads/2017/01/Hadie-profile-pic-circle-1.png" alt="profile-pic">
+        </div>
 
-        <p>
-            {{user.quote}}
-        </p>
-    </div>
-</section>
+        <div class="bio">
+            <h2>{{user.username}}</h2>
+            <p>
+                6891 minutes total watch time
+            </p>
 
-<section class="main">
-    <div class="list">
-        <h2>Lists</h2>
-        <section class="seen-movies-container">
-            {{#each seenMovies}}
-            <a href="/private/movieDetail/{{this.data.id}}">
-                <p>{{this.data.title}}</p>
-                </a>
-            {{/each}}
-        </section>
+            <p>
+                {{user.quote}}
+            </p>
+        </div>
+    </section>
 
-        
-        <section class="movies-to-see-container">         
-            {{#each moviesToSee}}
+    <section class="main">
+        <div class="list">
+            <h2>Lists</h2>
+            <section class="seen-movies-container">
+                <p>Movies we have seen: </p>
+                {{#each seenMovies}}
                 <a href="/private/movieDetail/{{this.data.id}}">
-                <p>{{this.data.title}}</p>
-                </a>
-            {{/each}}
-        </section>
-       
-    </div>
-</section>
+                    <p>{{this.data.title}}</p>
+                    </a>
+                {{/each}}
+            </section>
+
+            
+            <section class="movies-to-see-container">  
+                <p>Movies we want to see: </p>       
+                {{#each moviesToSee}}
+                    <a href="/private/movieDetail/{{this.data.id}}">
+                    <p>{{this.data.title}}</p>
+                    </a>
+                {{/each}}
+            </section>
+        
+        </div>
+    </section>
+</div>
