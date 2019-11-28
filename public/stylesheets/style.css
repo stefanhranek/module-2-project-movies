@@ -618,7 +618,11 @@ p.account-message {
     border-radius: 22px;
     width: 95%;
     background-color: rgb(255, 220, 21);
+
     /* button background color is set in 'button' style near top */
+}
+.remove {
+    background: red;
 }
 
 
@@ -1005,9 +1009,9 @@ button.settings-button {
 }
 
 
-<<<<<<< HEAD
+
 /* hr line */
-=======
+
 hr {
     border: 5px;
     height: 5px;
@@ -1021,10 +1025,9 @@ hr.title-hr {
     width: 70%;
     border-top: 2px solid #ffdc15;
 }
-<<<<<<< HEAD
 
 
-/*////////////////////////////////////////
+/*////////////////////////////////////
 ////////////// Profile page /////////////
 //////////////////////////////////////*/
 
@@ -1046,6 +1049,4 @@ img.settings-icon {
     width: auto;
     float: right;
 }
-=======
->>>>>>> c20d92b6e8a66203dbfd3b96ae0c0daf566d5eaa
->>>>>>> 836be50389928af2b306a5cdf8d9588107cc35a0
+

@@ -9,6 +9,7 @@ window.addEventListener('load', homeScreen = () => {
 
 
             const nowPlayingMovies = document.querySelector('.now-playing-api-movie-data')
+console.log("lkasdhklashdjaslkdhklasjd",nowPlayingMovies);
 
             let htmlString = '';
             homeMovies.forEach(function(movie) {
@@ -57,6 +58,8 @@ window.addEventListener('load', homeScreen = () => {
 
                 element.addEventListener('click', (e) => {
                     const movieId = element.dataset.movieid;
+                    console.log("THIS IS EEEEE",e);
+                    
 
                     // axios.get(`/private/movieDetail/get/${movieId}`)
                     window.location.assign(`/private/movieDetail/${movieId}`)

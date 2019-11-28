@@ -36,14 +36,27 @@
 </div>
 
 
+
 <div>
+
     <form action='/private/favorites/seen/{{movie.id}}' method='GET'>
-        <button class="signup-button">Add to Seen</button>
-    </form>
+    {{#if movie.seenMovie }}
+        <button class="signup-button remove">Remove from "Seen"</button>
+
+    {{else}}
+        <button class="signup-button">Add to "Seen"</button>
+    {{/if}}
+    </form> 
+
+
+    
 
     <form action='/private/favorites/next/{{movie.id}}' method='GET'>    
-        <button class="signup-button">Add to 'Want to See'</button>
+    {{#if movie.movieToSee}}
+        <button class="signup-button">Remove from "Want to See"</button>
+    {{else}}
+        <button class="signup-button">Add to "Want to See"</button>
+    {{/if}}
     </form>
     
-</div>
 </div>
