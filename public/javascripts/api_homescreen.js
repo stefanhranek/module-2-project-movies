@@ -35,7 +35,7 @@ window.addEventListener('load', homeScreen = () => {
                             <p style= "
                                 color:grey;
                                 
-                            ">(${movie.release_date.slice(0,4)})</p>
+                            ">${movie.release_date.slice(0,4)}</p>
                         </h2>
                         <img style= "width:400px;height:auto;margin-left:0;margin-right:25%"
                         class="movie-details-link" 
@@ -108,7 +108,7 @@ window.addEventListener('load', homeScreen = () => {
                             <p style= "
                                 color:grey;
                                 
-                            ">(${movie.release_date.slice(0,4)})</p>
+                            ">${movie.release_date.slice(0,4)}</p>
                         </h2>
                         <img style= "width:400px;height:auto;margin-left:0;margin-right:25%"
                         class="movie-details-link" 
@@ -178,7 +178,7 @@ window.addEventListener('load', homeScreen = () => {
                             <p style= "
                                 color:grey;
                                 
-                            ">(${movie.release_date.slice(0,4)})</p>
+                            ">${movie.release_date.slice(0,4)}</p>
                         </h2>
                         <img style= "width:400px;height:auto;margin-left:0;margin-right:25%"
                         class="movie-details-link" 
