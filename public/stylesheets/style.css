@@ -257,12 +257,29 @@ a {
 }
 
 .movie-plot {
-    padding-bottom: 10px;
+    padding-bottom: 50px;
+}
+
+.movie-detail-buttons {
+    margin-top: 70px;
+}
+
+.info-box {
+    display: flex;
+    justify-content: space-around;
+    background: rgb(24, 24, 24);
+    font-size: 45px;
+    align-items: center;
+}
+
+.info-box * {
+    margin: 10px 5px 10px 5px;
 }
 
 .cast-info {
     display: flex;
     flex-direction: column;
+    /* background: */
 }
 
 .search {
@@ -618,11 +635,12 @@ p.account-message {
     border-radius: 22px;
     width: 95%;
     background-color: rgb(255, 220, 21);
-
     /* button background color is set in 'button' style near top */
 }
+
 .remove {
-    background: red;
+    background: rgba(255, 220, 21, 0.7);
+    color: rgba(0, 0, 0, 1);
 }
 
 
@@ -729,7 +747,7 @@ img.fa.fa-search {
 }
 
 .movie-detail-buttons button {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -888,7 +906,7 @@ h2.home-section-heading {
 }
 
 .movie-detail-main * {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .movie-detail-main .top {
@@ -914,6 +932,7 @@ h2.home-section-heading {
 img.movie-detail-img {
     width: 100%;
     height: auto;
+    margin-bottom: 50px;
 }
 
 div.error-message {
@@ -1009,7 +1028,6 @@ button.settings-button {
 }
 
 
-
 /* hr line */
 
 hr {
@@ -1049,4 +1067,3 @@ img.settings-icon {
     width: auto;
     float: right;
 }
-
