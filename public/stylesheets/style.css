@@ -453,7 +453,7 @@ h2 {
 }
 
 .navbar img {
-    height: 5em;
+    height: 4em;
 }
 
 
@@ -963,7 +963,7 @@ input.input-style-settings {
     font-size: 1em;
     border-radius: 22px;
     width: 95%;
-    background-color: rgb(255, 220, 21);
+    background-color: #ffdc15;
 }
 
 button.settings-button {

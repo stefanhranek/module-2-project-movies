@@ -5,7 +5,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     console.log('≥≥≥≥≥≥≥≥≥≥≥≥≥≥≥≥≥', req.session);
 
-    res.render('home', { title: 'Home page' });
+    res.render('home', { 
+        layout: 'nav/yellowhome.hbs',
+        title: 'Home page' });
 });
 
 module.exports = router;
