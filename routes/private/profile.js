@@ -36,7 +36,9 @@ router.get('/', function(req, res, next) {
                             console.log('seenMovies', seenMovies);
 
 
-                            res.render('profile', { user: req.session.currentUser, moviesToSee, seenMovies });
+                            res.render('profile', { 
+                                layout: 'nav/yellowprofile.hbs',
+                                user: req.session.currentUser, moviesToSee, seenMovies });
                         })
                 })
                 .catch((err) => console.log(err));
