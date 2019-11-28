@@ -27,18 +27,18 @@
 <div class="movie-detail-buttons">
     <form action='/private/favorites/seen/{{movie.id}}' method='GET'>
         {{#if movie.seenMovie}}
-            <button>Remove from 'Seen'</button>
+            <button>Add to 'Seen</button>
         {{else}}
-        <button>Add to 'Seen'</button>
+        <button>Remove from 'Seen'</button>
         {{/if}}
     </form>
 
     <form action='/private/favorites/next/{{movie.id}}' method='GET'>    
         {{!-- <button>Add to 'Want to See'</button> --}}
                 {{#if movie.movieToSee}}
-            <button>Remove from 'Want to See'</button>
+            <button>Add to 'Want to See'</button>
         {{else}}
-        <button>Add to 'Want to See'</button>
+        <button>Remove from 'Want to See'</button>
         {{/if}}
     </form>
     
