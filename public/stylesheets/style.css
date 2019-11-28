@@ -807,9 +807,15 @@ img.fa.fa-search {
     white-space: nowrap;
 }
 
-.home-section-heading {
-    font-size: 2em;
+h2.home-section-heading {
+    font-size: 1.9em;
+    margin-bottom: 2px;
+    margin-top: 2%;
+    color: #f2f2f2;
 }
+
+/* Api data */
+
 
 
 /*////////////////////
@@ -966,3 +972,6 @@ button.settings-button {
     margin-top: 100px;
     margin-bottom: -25px;
 }
+
+/* hr line */
+
