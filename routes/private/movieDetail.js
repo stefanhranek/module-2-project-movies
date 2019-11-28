@@ -49,6 +49,7 @@ router.get('/:movieId', function(req, res, next) {
                 movieToSee = true;
             }
 
+            // console.log("THISSSSSSSSSSSSSS", seenMovies);
 
             // seenMovies.map(movie => {
             //     console.log(movieId, '=',movie);
@@ -85,7 +86,6 @@ router.get('/:movieId', function(req, res, next) {
             const movie = responseArr[0].data;
             movie.seenMovie = seenMovie;
             movie.movieToSee = movieToSee;
-            console.log("THISSSSSSSSSSSSSS", movie.seenMovie, movie.movieToSee);
 
             const credits = responseArr[1].data;
 
@@ -107,6 +107,7 @@ router.get('/:movieId', function(req, res, next) {
 
             const year = movie.release_date.slice(0, 4);
 
+            console.log(year);
 
 
             res.render('movieDetail', { movie, director, year });
