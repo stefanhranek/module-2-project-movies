@@ -603,8 +603,6 @@ p.account-message {
     letter-spacing: 1.5px;
 }
 
-
-
 .form-label-password-bottom {
     color: grey;
     padding: 5% 0 13% 0;
@@ -814,8 +812,8 @@ h2.home-section-heading {
     color: #f2f2f2;
 }
 
-/* Api data */
 
+/* Api data */
 
 
 /*////////////////////
@@ -879,24 +877,57 @@ h2.home-section-heading {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 300px;
+    margin: 0 6% 300px 6%;
+    line-height: 40px;
+    letter-spacing: 1.5px;
+}
+
+.movie-detail-main * {
+    margin-bottom: 25px;
+}
+
+.movie-detail-main .top {
+    margin-bottom: 50px;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 60px;
+    border-bottom: 7.5px solid #ffdc15;
+}
+
+.movie-detail-main .top h2 {
+    font-size: 80px;
+    margin-bottom: 30px;
+    margin-top: 6%;
+}
+
+.movie-plot p {
+    color: rgb(100, 100, 100);
+    margin-bottom: 2%;
 }
 
 img.movie-detail-img {
     width: 100%;
     height: auto;
-    /* margin: 0 10% 0 10%; */
 }
 
 div.error-message {
     text-align: center;
 }
 
+.movie-runtime img {
+    width: 40px;
+    margin-bottom: 0;
+}
+
+.cast-info {
+    font-size: 45px;
+}
+
 
 /*///////////////////////////////////
 ////////////// Settings page ///////////
 //////////////////////////////////////*/
-
 
 input.input-style-settings {
     font-size: 1.2em;
@@ -955,7 +986,6 @@ input.input-style-settings {
     letter-spacing: 1.5px;
 }
 
-
 .settings-button {
     padding: 30px;
     color: black;
@@ -973,5 +1003,5 @@ button.settings-button {
     margin-bottom: -25px;
 }
 
-/* hr line */
 
+/* hr line */

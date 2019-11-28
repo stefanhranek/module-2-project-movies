@@ -21,45 +21,45 @@ router.get('/:movieId', function(req, res, next) {
 
 
     const { movieId } = req.params
-    // const { moviesToSee, seenMovies } = req.session.currentUser;
+        // const { moviesToSee, seenMovies } = req.session.currentUser;
     const { _id } = req.session.currentUser;
     // find user by id
     let seenMovie = false;
     let movieToSee = false;
     User.findById({ _id })
-    .then((userObj) => {
-        const { seenMovies, moviesToSee } = userObj;
-        const seenMovieIdExists = seenMovies.includes(movieId);
-        const movieToSeeIdExists = moviesToSee.includes(movieId);
+        .then((userObj) => {
+            const { seenMovies, moviesToSee } = userObj;
+            const seenMovieIdExists = seenMovies.includes(movieId);
+            const movieToSeeIdExists = moviesToSee.includes(movieId);
 
-        // Check if movieId exist in seenMovies or not
-        if (seenMovieIdExists) {
-            const movieIndex = seenMovies.indexOf(movieId);
-            seenMovies.splice(movieIndex, 1);
-        } else if (!seenMovieIdExists) {
-            seenMovies.push(movieId)
-            seenMovie = true;
-        }
+            // Check if movieId exist in seenMovies or not
+            if (seenMovieIdExists) {
+                const movieIndex = seenMovies.indexOf(movieId);
+                seenMovies.splice(movieIndex, 1);
+            } else if (!seenMovieIdExists) {
+                seenMovies.push(movieId)
+                seenMovie = true;
+            }
 
-        if (movieToSeeIdExists) {
-            const movieIndex = moviesToSee.indexOf(movieId);
-            moviesToSee.splice(movieIndex, 1);
-        } else if (!movieToSeeIdExists) {
-            moviesToSee.push(movieId)
-            movieToSee = true;
-        }
+            if (movieToSeeIdExists) {
+                const movieIndex = moviesToSee.indexOf(movieId);
+                moviesToSee.splice(movieIndex, 1);
+            } else if (!movieToSeeIdExists) {
+                moviesToSee.push(movieId)
+                movieToSee = true;
+            }
 
             // console.log("THISSSSSSSSSSSSSS", seenMovies);
-            
+
             // seenMovies.map(movie => {
             //     console.log(movieId, '=',movie);
             //     if (movie == movieId) {
-        
-        
+
+
             //     }
             // })
-    })
-    .catch((err) => console.log(err));
+        })
+        .catch((err) => console.log(err));
 
 
 
@@ -71,7 +71,7 @@ router.get('/:movieId', function(req, res, next) {
     //         movieToSee = true;
     //     }
     // })
-    
+
 
 
 
@@ -103,10 +103,15 @@ router.get('/:movieId', function(req, res, next) {
                 )
             }
 
-// console.log(">>>>>>>>'",seenMovies);
+            // console.log(">>>>>>>>'",seenMovies);
 
-            res.render('movieDetail', { movie, director });
-            
+            const year = movie.release_date.slice(0, 4);
+
+            console.log(year);
+
+
+            res.render('movieDetail', { movie, director, year });
+
 
         })
         .catch((err) => console.log(err));

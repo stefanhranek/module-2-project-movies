@@ -1,45 +1,49 @@
-<img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="">
+<div class = 'movie-detail-main'>
+    <div class="top">
 <h2>{{movie.title}}</h2>
-<h5>{{movie.release_date}}</h5>
+<h5>{{year}}</h5>
+</div>
+<img class = "movie-detail-img" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="">
 
+<div class="cast-info">
+<span><span>Directed: </span>{{director}}</span>
+</div>
+
+<div>
 <ul>
     {{#each movie.genres}}
-    <li>{{this.name}}</li>
+    <p>{{this.name}}</p>
     {{/each}}
 </ul>
+</div>
 
-<div class="movie-info">
-<span>{{movie.runtime}}</span>
+
+
+
+<div class="movie-runtime">
+<span>{{movie.runtime}}<span> minutes</span></span>
+</div>
+
+<div class='movie-runtime'>
 <span>{{movie.vote_average}}</span>
+<img src="/images/star.png" alt="star">
 </div>
 
 <div class="movie-plot">
-    <span>Plot</span>  <br>
+    <p>Synopsis:</p>
 <span>{{movie.overview}}</span>
 
 </div>
 
-<div class="cast-info">
-<span>{{director}}</span>
-{{!-- <span>Writer</span> --}}
-</div>
 
-<div class="movie-detail-buttons">
+<div>
     <form action='/private/favorites/seen/{{movie.id}}' method='GET'>
-        {{#if movie.seenMovie}}
-            <button>Add to 'Seen</button>
-        {{else}}
-        <button>Remove from 'Seen'</button>
-        {{/if}}
+        <button class="signup-button">Add to Seen</button>
     </form>
 
     <form action='/private/favorites/next/{{movie.id}}' method='GET'>    
-        {{!-- <button>Add to 'Want to See'</button> --}}
-                {{#if movie.movieToSee}}
-            <button>Add to 'Want to See'</button>
-        {{else}}
-        <button>Remove from 'Want to See'</button>
-        {{/if}}
+        <button class="signup-button">Add to 'Want to See'</button>
     </form>
     
+</div>
 </div>
