@@ -21,6 +21,7 @@ window.addEventListener('load', homeScreen = () => {
                     <section style= "
                         display:flex;
                         flex-direction:column;
+                        margin:0 50px 0 50px;
                     ">
                         <h2 style="
                             text-align:center;
@@ -90,6 +91,7 @@ window.addEventListener('load', homeScreen = () => {
                     <section style= "
                         display:flex;
                         flex-direction:column;
+                        margin:0 50px 100px 50px;
                     ">
                         <h2 style="
                             text-align:center;
@@ -99,7 +101,10 @@ window.addEventListener('load', homeScreen = () => {
                             class='movie-title movie-details-link' 
                             data-movieid='${movie.id}'
                             >
-                            <p>${movie.title}</p>
+                            <p style= "
+                            width:400px;
+                            overflow: hidden;
+                            ">${movie.title}</p>
                             <p style= "
                                 color:grey;
                                 
@@ -155,8 +160,8 @@ window.addEventListener('load', homeScreen = () => {
                     <section style= "
                         display:flex;
                         flex-direction:column;
-                        margin-bottom:1.3%;
                         width:400px;
+                        margin:0 50px 0 50px;
                     ">
                         <h2 style="
                             text-align:center;
@@ -168,7 +173,7 @@ window.addEventListener('load', homeScreen = () => {
                             >
                             <p style= "
                             width:400px;
-                                overflow: hidden;
+                            overflow: hidden;
                             ">${movie.title}</p>
                             <p style= "
                                 color:grey;
