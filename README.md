@@ -3,7 +3,13 @@
 ## Description
 
 Users can keep track of all the movies they have watched, and separate the special ones they love into a separate list that can be displayed on their user profile for friends to see. They can customize profile to their liking & display information relating to movies.
- 
+
+### Link
+
+https://m2-deploy-movielog.herokuapp.com/
+
+⚠️ <b>Note:</b> This app was designed to be <b>mobile-view only</b>. So, until we make this app desktop-responsive, we ask you open up chrome/mozilla devTools and toggle 'device toolbar'. <i>'iPhone X'</i> is the most optimal device to view the app on. We apologize for this temporary inconvenience, but we do wish for you the intended user experience.
+
 ## User Stories
 
 - **404** - As a user I want to see a nice 404 page when I go to a page that doesn’t exist so that I know it was my fault 
