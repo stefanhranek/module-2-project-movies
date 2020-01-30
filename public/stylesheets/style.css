@@ -649,8 +649,9 @@ p.account-message {
   width: 85%;
   height: 10%;
   caret-color: red;
-  font-size: 0.8em;
+  font-size: 0.6em;
   padding-top: 20px;
+  letter-spacing: 3px;
 }
 
 .form-label {
