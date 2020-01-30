@@ -472,6 +472,31 @@ h2 {
 }
 
 /* Login page */
+html,
+body {
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+.top-sign-in {
+    display:none;
+  }
+
+  img.logo {
+    display: none;
+    height: 8vw;
+    width: 20vw;
+    margin: 0;
+  }
+
+  .movie-log-header {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    letter-spacing: 6px;
+    font-size: 1em;
+  }
 
 .login-page-wrapper {
   display: flex;
@@ -1156,7 +1181,7 @@ p.list-info {
 /*/////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////////////////////*/
 
-@media (min-width: 40em) {
+@media (min-width: 768px) {
   html,
   body {
     height: 0;
@@ -1164,19 +1189,23 @@ p.list-info {
     padding: 0;
   }
 
-  div.login-page {
+  .login-page {
     display: flex;
     justify-content: center;
     align-content: center;
-    height: auto;
-    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 1000px;
   }
 
-  div.login-page-wrapper {
+  .login-page-wrapper {
     height: 50vh;
-    width: 50vw;
-    margin: 10% 10%;
-    padding-left: 6%;
+    min-width: 50vw;
+    max-width: 60vw;
+    margin: 0 auto;
+    padding-left: 10%;
   }
 
   .top-sign-in {
@@ -1187,10 +1216,12 @@ p.list-info {
     margin-bottom: 5%;
   }
 
-  .logo {
-    height: auto;
-    width: 40%;
-    margin: 0;
+  img.logo {
+    display: flex;
+    height: 8vw;
+    width: 20vw;
+    max-width:50%;
+    margin: 0 0 0;
   }
 
   .movie-log-header {
@@ -1199,7 +1230,8 @@ p.list-info {
     padding: 0;
     line-height: 0;
     letter-spacing: 6px;
-    font-size: 2em;
+    font-size: 3em;
+    width: 100%;
   }
 
   .login-header {
@@ -1288,5 +1320,12 @@ p.list-info {
     margin: 5% 0 0 0;
     letter-spacing: 2px;
     font-size: 14px;
+
   }
+}
+
+@media (max-width: 1400px) {
+    .movie-log-header {
+        font-size: 1.5em;
+      }
 }
