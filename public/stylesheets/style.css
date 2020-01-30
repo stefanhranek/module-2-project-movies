@@ -513,8 +513,8 @@ img.logo {
 .login-header {
   padding: 15% 0 15% 0;
   line-height: 20px;
-  letter-spacing: 6px;
-  font-size: 2em;
+  letter-spacing: 3px;
+  font-size: 1.5em;
 }
 
 .login-form-wrapper {
@@ -601,26 +601,32 @@ p.account-message {
 
 /* Sign up page */
 
+.signup-page {
+    height: 100vh;
+}
+
 .signup-page-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 8%;
+  margin: 2%;
   font-family: "Open Sans";
 }
 
 .back-arrow-icon {
   padding: 10% 0 15% 0;
-  height: 20px;
+  height: 10px;
 }
 
 .back-arrow-icon img {
-  height: 60px;
+  height: 10px;
   width: auto;
 }
 
 .signup-header {
-  padding: 5% 0 15% 0;
-  line-height: 100px;
+    padding: 5% 0 15% 0;
+    line-height: 1.2em;
+    letter-spacing: 3px;
+    font-size: 1.5em;
 }
 
 .signup-form-wrapper {
@@ -637,12 +643,14 @@ p.account-message {
 .signup-form-section-wrapper input {
   border: 0;
   outline: 0;
-  border-bottom: 4px solid grey;
+  border-bottom: 1px solid grey;
   color: white;
   background: black;
   width: 85%;
-  height: 100px;
+  height: 10%;
   caret-color: red;
+  font-size: 0.8em;
+  padding-top: 20px;
 }
 
 .form-label {
@@ -651,21 +659,29 @@ p.account-message {
   letter-spacing: 1.5px;
 }
 
+label.form-label {
+    letter-spacing: 5px;
+    font-size: 0.7em;
+  }
+
 .form-label-password-bottom {
   color: grey;
   padding: 5% 0 13% 0;
   font-size: 0.9em;
   letter-spacing: 1.5px;
+  display: none;
 }
 
+
 .signup-button {
-  padding: 30px;
-  color: black;
-  font-weight: bolder;
-  font-size: 1em;
-  border-radius: 22px;
-  width: 95%;
-  background-color: rgb(255, 220, 21);
+    margin-top: 5%;
+    padding: 5px 0px;
+    color: black;
+    font-weight: bolder;
+    font-size: 0.9em;
+    border-radius: 22px;
+    width: 95%;
+    background-color: #ffdc15;
   /* button background color is set in 'button' style near top */
 }
 
@@ -994,12 +1010,12 @@ input.input-style-settings {
 }
 
 .back-arrow-icon {
-  padding: 10% 0 15% 0;
+  padding: 2% 0 15% 0;
   height: 20px;
 }
 
 .back-arrow-icon img {
-  height: 60px;
+  height: 40px;
   width: auto;
 }
 
