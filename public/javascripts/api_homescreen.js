@@ -9,7 +9,7 @@ window.addEventListener('load', homeScreen = () => {
 
 
             const nowPlayingMovies = document.querySelector('.now-playing-api-movie-data')
-console.log("lkasdhklashdjaslkdhklasjd",nowPlayingMovies);
+console.log("cozy",nowPlayingMovies);
 
             let htmlString = '';
             homeMovies.forEach(function(movie) {
