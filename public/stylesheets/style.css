@@ -1181,7 +1181,7 @@ p.list-info {
 /*/////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////////////////////////*/
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   html,
   body {
     height: 0;
@@ -1320,7 +1320,6 @@ p.list-info {
     margin: 5% 0 0 0;
     letter-spacing: 2px;
     font-size: 14px;
-
   }
 }
 
