@@ -4,8 +4,6 @@ const getMovieForm = document.querySelector('#get-movie-form');
 // Select sections that hold the forms
 const getIdSection = document.querySelector('#get-movie-section');
 
-const movieTitle = document.querySelector('.get-info');
-
 
 
 getMovieForm.addEventListener('submit', function(e) {

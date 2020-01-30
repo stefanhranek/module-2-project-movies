@@ -1,30 +1,36 @@
+<div class='login-page'>
 
-<div class='login-page-wrapper'>
+  <div class='login-page-wrapper'>
+    <section class='top-sign-in'>
+      <h1 class="movie-log-header">Movie Log</h1>
+      <img class='logo' src="/images/logo.png" alt="logo">
+    </section>
+    <h1 class='login-header'>Login</h1>
 
-  <h1 class='login-header'>Login</h1>
+    <form class='login-form-wrapper' action='/auth/login' method='POST'>
+      <div class='login-form-section-wrapper'>
+        <label class='form-label' for=''>Username</label>
+        <input type='text' name='username'>
+      </div>
 
-  <form class='login-form-wrapper' action='/auth/login' method='POST'>
-    <div class='login-form-section-wrapper'>
-      <label class='form-label' for=''>Username</label>
-      <input type='text' name='username'>
-    </div>
+      <div class='login-form-section-wrapper'>
+        <label class='form-label' for=''>Password</label>
+        <input class='password-input-style' type='password' name='password'>
+      </div>
 
-    <div class='login-form-section-wrapper'>
-      <label class='form-label' for=''>Password</label>
-      <input class='password-input-style' type='password' name='password'>
-    </div>
-
-    <button class='login-button' type='submit'>Login</button>
+      <button class='login-button' type='submit'>Login</button>
 
       <p class="account-message">
-        Don't have an account? <button class="log"><a class="sign-up-now-text" href="/public/signup">Sign up now!</a></button>
+        Don't have an account? <button class="log"><a class="sign-up-now-text" href="/public/signup">Sign up
+            now!</a></button>
       </p>
-  </form>
+    </form>
 
+  </div>
 </div>
 
-{{!-- error message display --}} 
+{{!-- error message display --}}
 
 {{#if errorMessage}}
-  <div class="error-message">{{ errorMessage }}</div>
+<div class="error-message">{{ errorMessage }}</div>
 {{/if}}
