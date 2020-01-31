@@ -28,7 +28,7 @@
     </div>
     <section class="list-wrapper">
         <div class="list">
-            <p class="list-name-title">Movies we have watched: </p>
+            <p class="list-name-title">Movies I've watched: </p>
             <section class="seen-movies-container">
                 <p class="list-info">{{#each seenMovies}}</p>
                 <a href="/private/movieDetail/{{this.data.id}}">
@@ -38,7 +38,7 @@
             </section>
 
 
-            <p class="list-name-title">Movies we want to see: </p>
+            <p class="list-name-title">Movies I want to see: </p>
             <section class="movies-to-see-container">
                 {{#each moviesToSee}}
                 <a href="/private/movieDetail/{{this.data.id}}">
