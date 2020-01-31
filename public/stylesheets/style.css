@@ -741,21 +741,31 @@ input:focus {
 
 /* Search bar */
 
+#get-movie-section {
+  height: 100vh;
+  width: 100vw;
+  font-size: 12px;
+}
+
 .container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-size: 1em;
+  width: 100%;
+  margin: auto;
+  padding-top: 15px;
 }
 
 .searchbar {
   /* float: right; */
   background-color: black;
   color: grey;
-  padding: 16px 10px;
-  width: 22%;
+  padding: 16px 10px 0px 10px;
+  width: 23%;
   border: none;
-  margin-top: 5%;
+  margin-top: 0;
   margin-right: 8px;
   font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
     sans-serif;
@@ -783,8 +793,9 @@ input:focus {
   font-weight: bold;
   transition: 0.3s;
   /* Stops the input box from inheriting the styling from the inputs on the request form */
-  border-bottom: white solid 2px;
+  border-bottom: yellow solid 2px;
   outline: none;
+  padding: 16px 10px 16px 10px;
 }
 
 .btn-search {
@@ -793,20 +804,22 @@ input:focus {
   text-decoration: none !important;
   font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
     sans-serif;
-  font-size: 1.5em;
-  padding-top: 5px;
-  margin-right: 40px;
+  font-size: 1.6em;
+  padding-top: 10px;
+  margin-right: 0;
 }
 
 img.fa.fa-search {
   display: flex;
-  padding-left: 15px;
-  height: 1.2em;
-  padding-top: 35px;
+  padding-left: 0;
+  height: 1.5em;
+  padding-top: 0;
 }
 
 #get-movie-form {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .movie-detail-buttons button {
