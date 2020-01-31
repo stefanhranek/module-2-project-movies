@@ -1786,14 +1786,18 @@ p {
   display: flex;
   flex-direction: column;
   margin: 20px 0 0 0;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
 }
 
   div.profile-page-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 6%;
+    padding: 140px 0 0 0;
     margin-bottom: 0;
+    width: 100vw;
   }
 
   .settings-icon {
@@ -1810,6 +1814,8 @@ p {
   div.settings-and-profile-pic-wrapper {
     display: flex;
     flex-direction: column;
+    height: 75%;
+    width: 100%;
   }
 
   div.profile-pic {
@@ -1819,26 +1825,31 @@ p {
   }
 
   h2.profile-name {
-    margin-top: 9%;
+    margin-top: auto;
     text-align: center;
     display: flex;
     justify-content: center;
     font-size: 1.1em;
-    margin-bottom: 20px;
+    margin-bottom: auto;
     letter-spacing: 2px;
     font-family: Klarissa;
   }
 
   img.profile-pic-img {
-    height: auto;
-    width: 70%;
+    height: 100%;
+    width: auto;
     border: 2px groove yellow;
     border-radius: 20px;
   }
 
   div.settings-icon-wrapper {
-    height: 5%;
+    height: 0;
   }
+
+.quoteSection {
+  height: 25%;
+  width: 100%;
+}
 
   .profile-info-box {
     display: flex;
@@ -1848,6 +1859,7 @@ p {
     align-items: center;
     text-align: center;
     width: 100%;
+    height: 70%;
     margin: 5px;
     padding-bottom: 40px;
     flex-direction: column;
@@ -1877,7 +1889,8 @@ p {
     letter-spacing: 3px;
     justify-content: flex-start;
     margin-bottom: 30px;
-    margin: 0 5% 0 5%;
+    margin: 0;
+    overflow: scroll;
     height: 25%;
   }
 
@@ -1887,20 +1900,20 @@ p {
     font-size: 10px;
     align-items: center;
     width: 90%;
-    height: 25%;
     padding-bottom: auto;
     padding-top: auto;
     flex-direction: column;
     letter-spacing: 3px;
     justify-content: flex-start;
-    margin: 0 5% 0 5%;
+    margin: 0;
     overflow: scroll;
+    height: 25%;
   }
 
   p.list-name-title {
     letter-spacing: 4px;
     font-size: 16px;
-    margin: 5% 0 15px 0;
+    margin: 5% 0 5% 0;
     text-align: center;
   }
 
@@ -1914,15 +1927,18 @@ p {
 
   .list-wrapper {
     padding: 0;
-    width: 50%;
+    width: 40%;
     border: 2px groove yellow;
     border-radius: 20px;
-    height: 700px;
-    margin: 20px 0 20px 100px;
+    margin: 20px 0 0 100px;
+    height: auto;
   }
 
   .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 95%;
-    margin-bottom: 50px;
   }
 }
