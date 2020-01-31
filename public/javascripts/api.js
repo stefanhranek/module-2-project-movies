@@ -40,13 +40,13 @@ getMovieForm.addEventListener('submit', function(e) {
                         <h2 style="text-align:center;
                             margin-top:10%;
                             margin-bottom:5%;
-                            font-size:50px;" 
+                            font-size:2em;" 
                         class='movie-title movie-details-link' 
                         data-movieid='${movie.id}'
                         >
                         ${movie.title} (${movie.release_date.slice(0,4)})
                         </h2>
-                        <img style= "width:500px;height:auto;margin-left:25%;margin-right:25%"
+                        <img style= "width:86%;height:auto;margin: auto 7%;"
                         class="movie-details-link" 
                         src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
                             data-movieid='${movie.id}'

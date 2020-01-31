@@ -1,67 +1,67 @@
-<div class = 'movie-detail-main'>
+<div class='movie-detail-main'>
     <div class="top">
-      
-<h2>{{movie.title}}</h2>
-<h5>{{year}}</h5>
-</div>
-<img class = "movie-detail-img" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="">
 
-<div class="cast-info">
-<span><span>Director: </span>{{director}}</span>
-</div>
+        <h2>{{movie.title}}</h2>
+        <h5>{{year}}</h5>
+    </div>
+    <img class="movie-detail-img" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="">
 
-<div class = "info-box">
-<ul>
-    {{#each movie.genres}}
-    <p>{{this.name}}</p>
-    {{/each}}
-</ul>
+    <div class="cast-info">
+        <span><span>Director: </span>{{director}}</span>
+    </div>
 
-
+    <div class="info-box">
+        <ul>
+            {{#each movie.genres}}
+            <p>{{this.name}}</p>
+            {{/each}}
+        </ul>
 
 
 
-<div class="movie-runtime">
-<span>{{movie.runtime}}<span> minutes</span></span>
-</div>
+
+
+        <div class="movie-runtime">
+            <span>{{movie.runtime}}<span> minutes</span></span>
+        </div>
 
 
 
-<div class='movie-runtime'>
-<span>{{movie.vote_average}}</span>
-<img src="/images/star.png" alt="star">
-</div>
+        <div class='movie-runtime'>
+            <span>{{movie.vote_average}}</span>
+            <img src="/images/star.png" alt="star">
+        </div>
 
-</div>
+    </div>
 
-<div class="movie-plot">
-    <p>Synopsis:</p>
-<span>{{movie.overview}}</span>
+    <div class="movie-plot">
+        <p>Synopsis:</p>
+        <span>{{movie.overview}}</span>
 
-</div>
-
-
-
-<div class= "movie-detail-buttons">
-
-    <form action='/private/favorites/seen/{{movie.id}}' method='GET'>
-    {{#if movie.seenMovie }}
-        <button class="signup-button">Add to "Seen"</button>
-
-    {{else}}
-        <button class="signup-button remove">Remove from "Seen"</button>
-    {{/if}}
-    </form> 
+    </div>
 
 
-    
 
-    <form action='/private/favorites/next/{{movie.id}}' method='GET'>    
-    {{#if movie.movieToSee}}
-        <button class="signup-button">Add to "Want to See"</button>
-    {{else}}
-        <button class="signup-button remove">Remove from "Want to See"</button>
-    {{/if}}
-    </form>
-    
-</div>
+    <div class="movie-detail-buttons">
+
+        <form action='/private/favorites/seen/{{movie.id}}' method='GET'>
+            {{#if movie.seenMovie }}
+            <button class="signup-button">Add to "Seen"</button>
+
+            {{else}}
+            <button class="signup-button remove">Remove from "Seen"</button>
+            {{/if}}
+        </form>
+
+
+
+
+        <form action='/private/favorites/next/{{movie.id}}' method='GET'>
+            {{#if movie.movieToSee}}
+            <button class="signup-button">Add to "Want to See"</button>
+            {{else}}
+            <button class="signup-button remove">Remove from "Want to See"</button>
+            {{/if}}
+        </form>
+
+    </div>
