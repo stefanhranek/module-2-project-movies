@@ -1,47 +1,52 @@
 <div class="profile-page-wrapper">
-    <div class="settings-and-profile-pic-wrapper">
-        <div class="settings-icon-wrapper">
-            <a class="back-arrow-icon" href="/private/settings"><img class="settings-icon" src="/images/settings-icon.png" alt="back-button"></a>  {{!-- we want this to float right --}}
-        </div>
-        <div class="profile-pic">
-            <img class="profile-pic-img" src="/images/goku2.jpg" alt="profile-pic">
-        </div>
-        <h2 class="profile-name">{{user.username}}</h2> <hr>
-    </div>
+    <div class="desktopFlexColumn">
 
-    <section class="header">
-        <div class="profile-info-box">
-            {{!-- <p>
-                6891 minutes total watch time
-            </p> --}}
-            <h4 class="favoriteQuote">Favorite quote:</h4>
-            <p class="quote-profile">
-                {{user.quote}}
-            </p>
+        <div class="settings-and-profile-pic-wrapper">
+            <div class="settings-icon-wrapper">
+                <a class="back-arrow-icon" href="/private/settings"><img class="settings-icon"
+                        src="/images/settings-icon.png" alt="back-button"></a> {{!-- we want this to float right --}}
+            </div>
+            <div class="profile-pic">
+                <img class="profile-pic-img" src="/images/goku2.jpg" alt="profile-pic">
+            </div>
+            <h2 class="profile-name">{{user.username}}</h2>
+            <hr>
         </div>
-    </section>
-<hr>
+
+        <section class="header">
+            <div class="profile-info-box">
+                {{!-- <p>
+                    6891 minutes total watch time
+                </p> --}}
+                <h4 class="favoriteQuote">Favorite quote:</h4>
+                <p class="quote-profile">
+                    {{user.quote}}
+                </p>
+            </div>
+        </section>
+        <hr>
+    </div>
     <section class="list-wrapper">
         <div class="list">
-                <p class="list-name-title">Movies we have watched: </p>
+            <p class="list-name-title">Movies we have watched: </p>
             <section class="seen-movies-container">
                 <p class="list-info">{{#each seenMovies}}</p>
                 <a href="/private/movieDetail/{{this.data.id}}">
                     <p class="list-info">{{this.data.title}}</p>
-                    </a>
+                </a>
                 {{/each}}
             </section>
 
-            
-                <p class="list-name-title">Movies we want to see: </p>       
-            <section class="movies-to-see-container">  
+
+            <p class="list-name-title">Movies we want to see: </p>
+            <section class="movies-to-see-container">
                 {{#each moviesToSee}}
-                    <a href="/private/movieDetail/{{this.data.id}}">
+                <a href="/private/movieDetail/{{this.data.id}}">
                     <p class="list-info">{{this.data.title}}</p>
-                    </a>
+                </a>
                 {{/each}}
             </section>
-        
+
         </div>
     </section>
 </div>
