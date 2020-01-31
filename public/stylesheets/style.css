@@ -432,6 +432,11 @@ h2 {
 /////Stefan's edits/////
 //////////////////////*/
 
+/* Desktop nav */
+.desktopNav {
+  display: none;
+}
+
 /* Bottom nav sticky */
 
 .navbar {
@@ -856,7 +861,7 @@ img.fa.fa-search {
   height: 30vh;
   width: auto;
   overflow-x: auto;
-  white-space: nowrap;
+  overflow-y: hidden;
 }
 
 .upcoming-movie-data {
@@ -865,7 +870,7 @@ img.fa.fa-search {
   height: 30vh;
   width: auto;
   overflow-x: auto;
-  white-space: nowrap;
+  overflow-y: hidden;
 }
 
 .trending-movie-data {
@@ -874,6 +879,7 @@ img.fa.fa-search {
   width: auto;
   overflow-x: auto;
   height: 30vh;
+  overflow-y: hidden;
 }
 
 
@@ -1228,6 +1234,43 @@ p.list-info {
     padding: 0;
   }
 
+  /* DESKTOP NAV */
+
+  .desktopNav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 88%;
+    height: 6%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0 6%;
+  }
+
+  .desktopNav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50%;
+    height: auto;
+    font-size: .6em;
+    text-transform: uppercase;
+  }
+  
+  .navHeader {
+    justify-content: flex-start;
+    width: 50%;
+    height: auto;
+    font-family: Klarissa;
+    font-size: 1.4em;
+  }
+
+  .desktopNavLink {
+    margin: 0 5%;
+  }
+
+
+  /* LOGIN PAGE */
+
   .login-page {
     height: auto;
     display: flex;
@@ -1483,7 +1526,7 @@ p.list-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 6%;
+    padding: 50px;
     margin-bottom: 0;
   }
 
@@ -1553,9 +1596,9 @@ p.list-info {
   }
 
   h2.home-section-heading {
-    font-size: 1em;
+    font-size: .8em;
     margin-bottom: 2px;
-    margin-top: 4%;
+    margin-top: 10px;
     color: #f2f2f2;
   }
 
