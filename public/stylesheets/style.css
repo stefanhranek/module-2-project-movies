@@ -1847,7 +1847,9 @@ p {
   }
 
   div.settings-icon-wrapper {
-    height: 0;
+    height: 50px;
+    width: 50px;
+    position: absolute;
   }
 
 .quoteSection {
