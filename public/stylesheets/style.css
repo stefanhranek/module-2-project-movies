@@ -1463,7 +1463,7 @@ p.list-info {
   }
 
   .back-arrow-icon {
-    display: none;
+    
     padding: 10% 0 15% 0;
     height: 20px;
   }
@@ -1801,14 +1801,18 @@ p {
   }
 
   .settings-icon {
+    visibility: visible;
     padding: 0 0 20px 0;
     height: 20px;
   }
 
   img.settings-icon {
-    height: 30px;
+    height: 40px;
     width: auto;
-    float: right;
+    float: left;
+    z-index: 1000;
+    padding-left: 10px;
+    padding-top: 2%;
   }
 
   div.settings-and-profile-pic-wrapper {
@@ -1880,7 +1884,7 @@ p {
   section.seen-movies-container {
     display: flex;
     background: rgb(24, 24, 24);
-    font-size: 10px;
+    font-size: 12px;
     align-items: center;
     width: 90%;
     padding-bottom: 40px;
@@ -1897,7 +1901,7 @@ p {
   section.movies-to-see-container {
     display: flex;
     background: rgb(24, 24, 24);
-    font-size: 10px;
+    font-size: 12px;
     align-items: center;
     width: 90%;
     padding-bottom: auto;
