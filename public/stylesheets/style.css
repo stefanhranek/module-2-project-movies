@@ -984,7 +984,7 @@ h2.home-section-heading {
 }
 
 .movie-detail-main * {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .movie-detail-main .top {
@@ -1017,7 +1017,7 @@ h2.home-section-heading {
 img.movie-detail-img {
   width: 100%;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 div.error-message {
@@ -1059,6 +1059,7 @@ margin: 10px;
 .cast-info {
   font-size: 1em;
   margin-bottom: 0px;
+  text-align: center;
 }
 
 .info-box {
