@@ -36,9 +36,10 @@ getMovieForm.addEventListener('submit', function(e) {
                             display:flex; 
                             flex-direction:column;
                             justify-content:space-around"
+                            class='desktopSearchList'
                                 >
                         <h2 style="text-align:center;
-                            margin-top:10%;
+                            margin: 10% 7% 5% 7%;
                             margin-bottom:5%;
                             font-size:2em;" 
                         class='movie-title movie-details-link' 

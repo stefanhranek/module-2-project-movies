@@ -1775,6 +1775,113 @@ p.list-info {
     font-size: 30px;
     margin: 10px;
   }
+
+/* Search bar DESKTOP*/
+/* Search bar DESKTOP*/
+/* Search bar DESKTOP*/
+/* Search bar DESKTOP*/
+/* Search bar DESKTOP*/
+
+#get-movie-section {
+  height: 100vh;
+  width: 100vw;
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  width: 100%;
+  margin: auto;
+  padding-top: 15px;
+}
+
+.searchbar {
+  /* float: right; */
+  background-color: black;
+  color: grey;
+  padding: 16px 10px 0px 10px;
+  width: 24%;
+  border: none;
+  margin-top: 0;
+  margin-right: 8px;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+    sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: yellow solid 3px;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+
+.searchbar::placeholder {
+  color: grey;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+    sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  /* transition: 0.2s; */
+}
+
+.searchbar:focus {
+  width: 100%;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+    sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: 0.3s;
+  /* Stops the input box from inheriting the styling from the inputs on the request form */
+  border-bottom: yellow solid 2px;
+  outline: none;
+  padding: 16px 10px 16px 10px;
+  letter-spacing: 2px;
+}
+
+.btn-search {
+  cursor: pointer;
+  color: white;
+  text-decoration: none !important;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+    sans-serif;
+  font-size: 1.1em;
+  padding-top: 10px;
+  margin-right: 0;
+}
+
+img.fa.fa-search {
+  display: flex;
+  padding-left: 0;
+  height: 1.5em;
+  padding-top: 0;
+}
+
+#get-movie-form {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  font-size: 1.5em;
+  z-index: 9999;
+  top: 10px;
+}
+
+.movie-detail-buttons button {
+  color: rgb(0, 0, 0);
+}
+
+
+.movie-results {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 }
 
 @media (max-width: 1400px) {
@@ -1789,6 +1896,22 @@ p {
   margin: 0;
   height: auto;
 }
+
+
+
+
+  /*//////////////////////////////////////////////
+////////////// SPECIAL CASES BELOW /////////////
+////////////////////////////////////////////*/
+  /*//////////////////////////////////////////////
+////////////// SPECIAL CASES BELOW /////////////
+////////////////////////////////////////////*/
+  /*//////////////////////////////////////////////
+////////////// SPECIAL CASES BELOW /////////////
+////////////////////////////////////////////*/
+
+
+
 
 @media only screen and (min-width: 1350px) {
   /*////////////////////////////////////
