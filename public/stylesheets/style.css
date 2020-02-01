@@ -973,9 +973,14 @@ h2.home-section-heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 6% 300px 6%;
+  align-items: center;
+  margin: auto;
   line-height: 40px;
   letter-spacing: 1.5px;
+  font-size: 20px;
+  width: 80vw;
+  height: 100vh;
+  margin-top: 500px;
 }
 
 .movie-detail-main * {
@@ -986,15 +991,22 @@ h2.home-section-heading {
   margin-bottom: 50px;
   position: sticky;
   top: 0;
-  background: rgba(0, 0, 0, 0.75);
-  font-size: 60px;
-  border-bottom: 7.5px solid #ffdc15;
+  background: rgba(0, 0, 0, 0.90);
+  font-size: 20px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #ffdc15;
+  width: 100%;
+  height: 100px;
 }
 
 .movie-detail-main .top h2 {
-  font-size: 80px;
-  margin-bottom: 30px;
-  margin-top: 6%;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.movie-detail-main .top h5 {
+  color: grey;
 }
 
 .movie-plot p {
@@ -1005,20 +1017,121 @@ h2.home-section-heading {
 img.movie-detail-img {
   width: 100%;
   height: auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 div.error-message {
   text-align: center;
 }
 
-.movie-runtime img {
-  width: 40px;
+.movie-runtime {
   margin-bottom: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.movie-runtime span {
+margin: 10px;
+}
+
+.rating {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.rating span {
+  margin: 5px;
+}
+
+.rating img {
+  height: 30px;
+  width: auto;
+  margin: 5px;
 }
 
 .cast-info {
-  font-size: 45px;
+  font-size: 1em;
+  margin-bottom: 0px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1em;
+  width: 90%;
+  padding: 5%;
+}
+
+.info-box section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1em;
+  width: 100%;
+  margin: auto;
+}
+
+.info-box p {
+  margin: auto;
+  font-size: 1em;
+}
+
+.info-box h5 {
+  margin: 0;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #ffdc15;
+  width: 100%;
+}
+
+.genres {
+  margin: 10px 0 10px 0;
+}
+
+.movie-detail-buttons {
+  margin: 0;
+  width: 100%;
+}
+
+.detail-buttons-wrapper {
+  margin-bottom: 100px;
+  width: 100%;
+}
+
+.detail-buttons-wrapper form {
+  width: 100%;
+}
+
+
+.add-button {
+  margin-top: 5%;
+  padding: 5px 0px;
+  color: black;
+  font-weight: bolder;
+  font-size: 0.9em;
+  border-radius: 22px;
+  width: 100%;
+  background-color: #ffdc15;
+  margin-bottom: 0;
+}
+
+.remove-button {
+  padding: 5px 0px;
+  color: black;
+  font-weight: bolder;
+  font-size: 0.9em;
+  border-radius: 22px;
+  width: 100%;
+  background-color: #ffdc15;
 }
 
 /*///////////////////////////////////
@@ -1476,7 +1589,6 @@ p.list-info {
   }
 
   .back-arrow-icon {
-    
     padding: 10% 0 15% 0;
     height: 20px;
   }
@@ -1776,112 +1888,210 @@ p.list-info {
     margin: 10px;
   }
 
-/* Search bar DESKTOP*/
-/* Search bar DESKTOP*/
-/* Search bar DESKTOP*/
-/* Search bar DESKTOP*/
-/* Search bar DESKTOP*/
+  /* Search bar DESKTOP*/
+  /* Search bar DESKTOP*/
+  /* Search bar DESKTOP*/
+  /* Search bar DESKTOP*/
+  /* Search bar DESKTOP*/
 
-#get-movie-section {
-  height: 100vh;
-  width: 100vw;
-  font-size: 12px;
-}
+  #get-movie-section {
+    height: 100vh;
+    width: 100vw;
+    font-size: 12px;
+  }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 1em;
-  width: 100%;
-  margin: auto;
-  padding-top: 15px;
-}
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    width: 100%;
+    margin: auto;
+    padding-top: 15px;
+  }
 
-.searchbar {
-  /* float: right; */
-  background-color: black;
-  color: grey;
-  padding: 16px 10px 0px 10px;
-  width: 24%;
-  border: none;
-  margin-top: 0;
-  margin-right: 8px;
-  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
-    sans-serif;
-  font-size: 1.5em;
-  font-weight: bold;
-  border-bottom: yellow solid 3px;
-  transition: 0.3s;
-  letter-spacing: 1px;
-}
+  .searchbar {
+    /* float: right; */
+    background-color: black;
+    color: grey;
+    padding: 16px 10px 0px 10px;
+    width: 24%;
+    border: none;
+    margin-top: 0;
+    margin-right: 8px;
+    font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+      sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: yellow solid 3px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+  }
 
-.searchbar::placeholder {
-  color: grey;
-  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
-    sans-serif;
-  font-size: 1em;
-  font-weight: bold;
-  /* transition: 0.2s; */
-}
+  .searchbar::placeholder {
+    color: grey;
+    font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+      sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    /* transition: 0.2s; */
+  }
 
-.searchbar:focus {
-  width: 100%;
-  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
-    sans-serif;
-  font-size: 1.5em;
-  font-weight: bold;
-  transition: 0.3s;
-  /* Stops the input box from inheriting the styling from the inputs on the request form */
-  border-bottom: yellow solid 2px;
-  outline: none;
-  padding: 16px 10px 16px 10px;
-  letter-spacing: 2px;
-}
+  .searchbar:focus {
+    width: 100%;
+    font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+      sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: 0.3s;
+    /* Stops the input box from inheriting the styling from the inputs on the request form */
+    border-bottom: yellow solid 2px;
+    outline: none;
+    padding: 16px 10px 16px 10px;
+    letter-spacing: 2px;
+  }
 
-.btn-search {
-  cursor: pointer;
-  color: white;
-  text-decoration: none !important;
-  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
-    sans-serif;
-  font-size: 1.1em;
-  padding-top: 10px;
-  margin-right: 0;
-}
+  .btn-search {
+    cursor: pointer;
+    color: white;
+    text-decoration: none !important;
+    font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+      sans-serif;
+    font-size: 1.1em;
+    padding-top: 10px;
+    margin-right: 0;
+  }
 
-img.fa.fa-search {
-  display: flex;
-  padding-left: 0;
-  height: 1.5em;
-  padding-top: 0;
-}
+  img.fa.fa-search {
+    display: flex;
+    padding-left: 0;
+    height: 1.5em;
+    padding-top: 0;
+  }
 
-#get-movie-form {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0px;
-  font-size: 1.5em;
-  z-index: 9999;
-  top: 10px;
-}
+  #get-movie-form {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    font-size: 1.5em;
+    z-index: 9999;
+    top: 10px;
+  }
 
-.movie-detail-buttons button {
-  color: rgb(0, 0, 0);
-}
+  .movie-detail-buttons button {
+    color: rgb(0, 0, 0);
+  }
 
+  .movie-results {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 
-.movie-results {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
+  /*//////// MOVIE DETAIL //////////////
+/////////////////////////////////////
+//////////////////////////////////////*/
 
+  .movie-detail-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 6% 300px 6%;
+    line-height: 40px;
+    letter-spacing: 1.5px;
+  }
+
+  .movie-detail-main * {
+    margin-bottom: 30px;
+  }
+
+  .movie-detail-main .top {
+    margin-bottom: 50px;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 0px;
+    border-bottom: 7.5px solid #ffdc15;
+  }
+
+  .movie-detail-main .top h2 {
+    font-size: 1em;
+    margin-bottom: 30px;
+    margin-top: 6%;
+  }
+
+  .movie-plot p {
+    color: rgb(100, 100, 100);
+    margin-bottom: 2%;
+  }
+
+  img.movie-detail-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  div.error-message {
+    text-align: center;
+  }
+
+  .movie-runtime {
+    margin-bottom: 0;
+  }
+
+  .movie-runtime img {
+    width: 40px;
+    margin-bottom: 0;
+  }
+
+  .rating {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .genres {
+    margin: 20px 0 0 0;
+  }
+
+  .cast-info {
+    font-size: 45px;
+  }
+
+  .movie-detail-buttons {
+    margin: 0;
+    width: 100%;
+  }
+
+  .add-button {
+    margin-top: 5%;
+    padding: 5px 0px;
+    color: black;
+    font-weight: bolder;
+    font-size: 0.9em;
+    border-radius: 22px;
+    width: 50%;
+    background-color: #ffdc15;
+  }
+
+  .remove-button {
+    margin-top: 5%;
+    padding: 5px 0px;
+    color: black;
+    font-weight: bolder;
+    font-size: 0.9em;
+    border-radius: 22px;
+    width: 50%;
+    background-color: #ffdc15;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -1897,35 +2107,29 @@ p {
   height: auto;
 }
 
-
-
-
-  /*//////////////////////////////////////////////
+/*//////////////////////////////////////////////
 ////////////// SPECIAL CASES BELOW /////////////
 ////////////////////////////////////////////*/
-  /*//////////////////////////////////////////////
+/*//////////////////////////////////////////////
 ////////////// SPECIAL CASES BELOW /////////////
 ////////////////////////////////////////////*/
-  /*//////////////////////////////////////////////
+/*//////////////////////////////////////////////
 ////////////// SPECIAL CASES BELOW /////////////
 ////////////////////////////////////////////*/
-
-
-
 
 @media only screen and (min-width: 1350px) {
   /*////////////////////////////////////
 ////////////// Profile page /////////////
 //////////////////////////////////////*/
 
-.desktopFlexColumn {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0 0 0;
-  width: 40%;
-  justify-content: center;
-  align-items: center;
-}
+  .desktopFlexColumn {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 0 0;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+  }
 
   div.profile-page-wrapper {
     display: flex;
@@ -1988,10 +2192,10 @@ p {
     position: absolute;
   }
 
-.quoteSection {
-  height: 25%;
-  width: 100%;
-}
+  .quoteSection {
+    height: 25%;
+    width: 100%;
+  }
 
   .profile-info-box {
     display: flex;
