@@ -980,7 +980,7 @@ h2.home-section-heading {
   font-size: 20px;
   width: 80vw;
   height: 100vh;
-  margin-top: 500px;
+  margin-top: 600px;
 }
 
 .movie-detail-main * {
@@ -989,14 +989,15 @@ h2.home-section-heading {
 
 .movie-detail-main .top {
   margin-bottom: 50px;
-  position: sticky;
+  position: fixed;
   top: 0;
   background: rgba(0, 0, 0, 0.90);
   font-size: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: 4px solid #ffdc15;
   width: 100%;
   height: 100px;
+  margin-top: 0px;
 }
 
 .movie-detail-main .top h2 {
@@ -1011,7 +1012,13 @@ h2.home-section-heading {
 
 .movie-plot p {
   color: rgb(100, 100, 100);
+  margin-bottom: 5%;
+}
+
+.movie-plot span {
+  height: 10px;
   margin-bottom: 2%;
+  overflow: scroll;
 }
 
 img.movie-detail-img {
@@ -1099,12 +1106,12 @@ margin: 10px;
 }
 
 .movie-detail-buttons {
-  margin: 0;
+  margin: 0 0 150px 0;
   width: 100%;
 }
 
 .detail-buttons-wrapper {
-  margin-bottom: 100px;
+  margin-bottom: 0px;
   width: 100%;
 }
 
@@ -2000,30 +2007,55 @@ p.list-info {
 
   .movie-detail-main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    margin: 0 6% 300px 6%;
+    align-items: center;
+    margin: auto;
     line-height: 40px;
     letter-spacing: 1.5px;
+    height: 100vh;
+    width: 100vw;
   }
 
-  .movie-detail-main * {
-    margin-bottom: 30px;
+
+  section.movieDetailsDesktopLeftSide {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 40%;
+    margin: auto 2%;
+    align-items: center;
   }
+
+  section.movieDetailsDesktopRightSide {
+    height: 80%;
+    width: 40%;
+    margin: auto 2%;
+  }
+
 
   .movie-detail-main .top {
-    margin-bottom: 50px;
-    position: sticky;
-    top: 0;
+    margin-bottom: 30px;
+    position: relative;
     background: rgba(0, 0, 0, 0.75);
-    font-size: 0px;
-    border-bottom: 7.5px solid #ffdc15;
+    font-size: 1.5em;
+    border-bottom: 5px solid #ffdc15;
+    padding-bottom: 10px;
+    height: 10%;
+    text-align-last: center;
   }
 
   .movie-detail-main .top h2 {
     font-size: 1em;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     margin-top: 6%;
+    color: white;
+    visibility: visible;
+    display: unset;
+  }
+
+  .top h5 {
+    font-size: .6em;
   }
 
   .movie-plot p {
@@ -2031,10 +2063,19 @@ p.list-info {
     margin-bottom: 2%;
   }
 
+  .movie-plot {
+    height: 200px;
+    margin-bottom: 2%;
+    overflow: scroll;
+    margin-top: 4%;
+    font-size: .9em; 
+  }
+
   img.movie-detail-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 50px;
+    height: 78%;
+    width: auto;
+    margin-bottom: 0px;
+    align-self: center;
   }
 
   div.error-message {
@@ -2050,6 +2091,16 @@ p.list-info {
     margin-bottom: 0;
   }
 
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: .8em;
+    width: 90%;
+    padding: 3% 5%;
+  }
+
   .rating {
     margin-bottom: 0;
     display: flex;
@@ -2060,16 +2111,28 @@ p.list-info {
   }
 
   .genres {
+    display: flex;
+    flex-wrap: wrap;
     margin: 20px 0 0 0;
   }
 
-  .cast-info {
-    font-size: 45px;
+  .genres p {
+    margin: 0 20px;
+  }
+
+  .cast-info span{
+    font-size: 1em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 4%;
   }
 
   .movie-detail-buttons {
     margin: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .add-button {
@@ -2079,8 +2142,9 @@ p.list-info {
     font-weight: bolder;
     font-size: 0.9em;
     border-radius: 22px;
-    width: 50%;
+    width: 90%;
     background-color: #ffdc15;
+    margin: 5%;
   }
 
   .remove-button {
@@ -2090,8 +2154,9 @@ p.list-info {
     font-weight: bolder;
     font-size: 0.9em;
     border-radius: 22px;
-    width: 50%;
+    width: 90%;
     background-color: #ffdc15;
+    margin: 5%;
   }
 }
 

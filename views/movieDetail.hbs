@@ -1,5 +1,5 @@
 <div class='movie-detail-main'>
-    <section>
+    <section class="movieDetailsDesktopLeftSide">
         <div class="top">
 
             <h2>{{movie.title}}</h2>
@@ -11,7 +11,7 @@
             <span><span>Director: </span>{{director}}</span>
         </div>
     </section>
-    <section>
+    <section class="movieDetailsDesktopRightSide">
         <div class="info-box">
 
             <section>
@@ -48,7 +48,7 @@
 
         <div class="movie-detail-buttons">
 
-            <form action='/private/favorites/seen/{{movie.id}}' method='GET'>
+            <form class='detail-buttons-wrapper' action='/private/favorites/seen/{{movie.id}}' method='GET'>
                 {{#if movie.seenMovie }}
                 <button class="add-button">Add to "Seen"</button>
 
