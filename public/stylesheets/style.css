@@ -200,8 +200,8 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: .18;
-  z-index: -2;
+  opacity: .12;
+  z-index: -99999;
 }
 
 .header {
@@ -1619,10 +1619,6 @@ p.list-info {
 
   /* Sign up page */
 
-  .back-arrow-icon {
-    display: none;
-  }
-
   .signup-page {
     height: auto;
     display: flex;
@@ -2380,7 +2376,6 @@ p {
     height: 40px;
     width: auto;
     float: left;
-    z-index: 1000;
     padding-left: 10px;
     padding-top: 2%;
   }
