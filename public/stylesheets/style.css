@@ -145,6 +145,19 @@ table {
 //////////// GENERAL ELEMENT ATTRIBUTES ///////////////
 /////////////////////////////////////////////////////*/
 
+.background {
+  background: repeat url('https://rlc5.dcccd.edu/game/wp-content/uploads/2017/03/Step1.png');
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .4;
+  z-index: -99999;
+  background-repeat: repeat-y;
+}
+
 body {
   line-height: 1;
   font-family: "Open Sans", sans-serif;
@@ -180,7 +193,7 @@ textarea {
 
 button {
   padding: 0.5px;
-  background-color: #000000;
+  background-color: transparent;
   font-size: 1.5em;
   border: none;
 }
@@ -193,14 +206,14 @@ a {
 /*////////// CLASSES /////////////////*/
 
 .background-image-profile {
-  background: no-repeat url('./../images/goku2.jpg');
+  background: repeat-y url('./../images/goku2.jpg');
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: .12;
+  opacity: .08;
   z-index: -99999;
 }
 
@@ -559,7 +572,7 @@ img.logo {
   outline: 0;
   border-bottom: 1px solid grey;
   color: white;
-  background: black;
+  background: transparent;
   width: 85%;
   height: 10%;
   caret-color: red;
@@ -613,6 +626,7 @@ a.sign-up-now-text {
   padding-top: 50px;
   padding-left: 0px;
   letter-spacing: 2px;
+  background: transparent;
 }
 
 p.account-message {
@@ -671,7 +685,7 @@ p.account-message {
   outline: 0;
   border-bottom: 1px solid grey;
   color: white;
-  background: black;
+  background: transparent;
   width: 85%;
   height: 10%;
   caret-color: red;
@@ -995,10 +1009,6 @@ h2.home-section-heading {
   margin-top: 600px;
 }
 
-.movie-detail-main * {
-  margin-bottom: 10px;
-}
-
 .movie-detail-main .top {
   margin-bottom: 50px;
   position: fixed;
@@ -1007,9 +1017,10 @@ h2.home-section-heading {
   font-size: 20px;
   padding-bottom: 10px;
   border-bottom: 4px solid #ffdc15;
-  width: 100%;
+  width: 80%;
   height: 100px;
   margin-top: 0px;
+  padding-left: auto;
 }
 
 .movie-detail-main .top h2 {
@@ -1162,6 +1173,7 @@ div.error-message {
 input.input-style-settings {
   font-size: 1.2em;
   padding-bottom: 5px;
+  background: transparent;
 }
 
 .settings-page-wrapper {
@@ -1225,7 +1237,7 @@ input.input-style-settings {
   outline: 0;
   border-bottom: 1px solid grey;
   color: white;
-  background: black;
+  background: transparent;
   width: 85%;
   height: 10%;
   caret-color: red;
@@ -1341,7 +1353,7 @@ div.settings-icon-wrapper {
   align-items: center;
   text-align: center;
   width: 100%;
-  margin: 5px;
+  margin: 0px;
   padding-bottom: 40px;
   flex-direction: column;
   letter-spacing: 3px;
@@ -1457,7 +1469,7 @@ p.list-info {
     align-items: center;
     width: 88%;
     height: 70px;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .3);
     padding: 20px 120px;
   }
 
@@ -1560,7 +1572,7 @@ p.list-info {
     outline: 0;
     border-bottom: 1px solid grey;
     color: white;
-    background: black;
+    background: transparent;
     width: 85%;
     height: 5%;
     caret-color: red;
@@ -1644,6 +1656,7 @@ p.list-info {
   .back-arrow-icon {
     padding: 10% 0 15% 0;
     height: 20px;
+    display: none;
   }
 
   .back-arrow-icon img {
@@ -1743,7 +1756,17 @@ p.list-info {
 /////// Home page ////////
 ///////////////////////*/
 
-  
+  .background {
+    background: no-repeat url('https://rlc5.dcccd.edu/game/wp-content/uploads/2017/03/Step1.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .4;
+    z-index: -99999;
+  }
 
   hr {
     border: 5px;
@@ -1891,12 +1914,12 @@ p.list-info {
   .profile-info-box {
     display: flex;
     justify-content: space-around;
-    background: rgb(24, 24, 24);
+    background:rgba(255, 255, 255, 0.041);
     font-size: 45px;
     align-items: center;
     text-align: center;
     width: 100%;
-    margin: 50px;
+    margin: 0px;
     padding-bottom: 40px;
     flex-direction: column;
     letter-spacing: 3px;
@@ -1909,7 +1932,7 @@ p.list-info {
   section.seen-movies-container {
     display: flex;
     justify-content: space-around;
-    background: rgb(24, 24, 24);
+    background: rgba(255, 255, 255, 0.041);
     font-size: 45px;
     align-items: center;
     text-align: center;
@@ -1925,7 +1948,7 @@ p.list-info {
 
   section.movies-to-see-container {
     display: flex;
-    background: rgb(24, 24, 24);
+    background: rgba(255, 255, 255, 0.041);
     font-size: 45px;
     align-items: center;
     width: 90%;
@@ -1951,7 +1974,7 @@ p.list-info {
   }
 
   .list-wrapper {
-    background: rgba(0, 0, 0, .5);
+    background: transparent;
   }
 
   /* Search bar DESKTOP*/
@@ -2093,7 +2116,7 @@ p.list-info {
   .movie-detail-main .top {
     margin-bottom: 30px;
     position: relative;
-    background: rgba(0, 0, 0, 0.75);
+    background: transparent;
     font-size: 1.5em;
     border-bottom: 5px solid #ffdc15;
     padding-bottom: 10px;
@@ -2155,6 +2178,8 @@ p.list-info {
     font-size: 0.8em;
     width: 90%;
     padding: 3% 5%;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.041);
   }
 
   .rating {
@@ -2222,6 +2247,7 @@ p.list-info {
   input.input-style-settings {
     font-size: 1.2em;
     padding-bottom: 5px;
+    background: transparent;
   }
 
   .settings-page-wrapper {
@@ -2252,12 +2278,12 @@ p.list-info {
     justify-content: flex-start;
   }
 
-  .back-arrow-icon {
+  .a-settings-icon {
     padding: 2% 0 15% 0;
     height: 20px;
   }
 
-  .back-arrow-icon img {
+  .a-settings-icon img {
     height: 40px;
     width: auto;
   }
@@ -2298,6 +2324,7 @@ p.list-info {
     font-size: 1.5em;
     padding-top: 10px;
     letter-spacing: 4px;
+    background: transparent;
   }
 
   .form-label {
@@ -2435,13 +2462,13 @@ p {
   .profile-info-box {
     display: flex;
     justify-content: space-around;
-    background: rgb(24, 24, 24);
+    background:rgba(255, 255, 255, 0.041);
     font-size: 16px;
     align-items: center;
     text-align: center;
     width: 100%;
     height: 70%;
-    margin: 5px;
+    margin: 0px;
     padding-bottom: 40px;
     flex-direction: column;
     letter-spacing: 3px;
@@ -2461,7 +2488,7 @@ p {
 
   section.seen-movies-container {
     display: flex;
-    background: rgb(24, 24, 24);
+    background: rgba(255, 255, 255, 0.041);
     font-size: 12px;
     align-items: center;
     width: 90%;
@@ -2478,7 +2505,7 @@ p {
 
   section.movies-to-see-container {
     display: flex;
-    background: rgb(24, 24, 24);
+    background:rgba(255, 255, 255, 0.041);
     font-size: 12px;
     align-items: center;
     width: 90%;
