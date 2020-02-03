@@ -192,6 +192,18 @@ a {
 
 /*////////// CLASSES /////////////////*/
 
+.background-image-profile {
+  background: no-repeat url('./../images/goku2.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .18;
+  z-index: -2;
+}
+
 .header {
   display: flex;
 }
