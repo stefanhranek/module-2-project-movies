@@ -1973,16 +1973,15 @@ p.list-info {
 
   .searchbar {
     /* float: right; */
-    background-color: black;
+    background-color: transparent;
     color: grey;
     padding: 16px 10px 0px 10px;
     width: 24%;
     border: none;
     margin-top: 0;
     margin-right: 8px;
-    font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
-      sans-serif;
-    font-size: 1.5em;
+    font-family: Open Sans;
+    font-size: 15px;
     font-weight: bold;
     border-bottom: yellow solid 3px;
     transition: 0.3s;
@@ -2002,7 +2001,7 @@ p.list-info {
     width: 100%;
     font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
       sans-serif;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     transition: 0.3s;
     /* Stops the input box from inheriting the styling from the inputs on the request form */
@@ -2021,6 +2020,7 @@ p.list-info {
     font-size: 1.1em;
     padding-top: 10px;
     margin-right: 0;
+    background: transparent;
   }
 
   img.fa.fa-search {
