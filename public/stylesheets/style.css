@@ -1457,7 +1457,7 @@ p.list-info {
     align-items: center;
     width: 88%;
     height: 70px;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, .8);
     padding: 20px 120px;
   }
 
