@@ -1498,7 +1498,7 @@ p.list-info {
     display: flex;
     align-content: center;
     align-items: center;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
   }
 
   img.logo {
@@ -1579,7 +1579,8 @@ p.list-info {
   }
 
   .login-button {
-    margin-top: 30px;
+    margin-top: 0;
+    margin-right: 3%;
     padding: 10px;
     color: black;
     font-weight: bolder;
@@ -1605,6 +1606,10 @@ p.list-info {
   }
 
   /* Sign up page */
+
+  .back-arrow-icon {
+    display: none;
+  }
 
   .signup-page {
     height: auto;
@@ -1669,7 +1674,7 @@ p.list-info {
   }
 
   .signup-button {
-    margin: 5% 0 0 0;
+    margin: 0 3% 0 0;
     padding: 10px;
     font-weight: bolder;
     font-size: 18px;
@@ -1677,6 +1682,11 @@ p.list-info {
     width: 20%;
     background-color: rgb(255, 220, 21);
     /* button background color is set in 'button' style near top */
+  }
+
+  .bottom-signup {
+    display: flex;
+    align-items: center;
   }
 
   .remove {
