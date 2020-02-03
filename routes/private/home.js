@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 
     res.render('home', { 
         layout: 'nav/yellowhome.hbs',
-        title: 'Home page' });
+        title: 'Home | Movie Log' });
 });
 
 module.exports = router;

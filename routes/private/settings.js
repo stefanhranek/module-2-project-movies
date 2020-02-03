@@ -5,7 +5,9 @@ const User = require('./../../Models/User')
 // GET '/private/settings'
 router.get('/', function(req, res, next) {
     res.render('settings', { 
-        user: req.session.currentUser });
+        user: req.session.currentUser,
+        title: 'Settings | Movie Log'
+    });
 });
 
 

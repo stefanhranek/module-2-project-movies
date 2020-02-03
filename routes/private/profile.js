@@ -38,6 +38,7 @@ router.get('/', function(req, res, next) {
 
                             res.render('profile', { 
                                 layout: 'nav/yellowprofile.hbs',
+                                title: 'Profile | Movie Log',
                                 user: req.session.currentUser, moviesToSee, seenMovies });
                         })
                 })

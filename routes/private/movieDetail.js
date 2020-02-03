@@ -112,6 +112,7 @@ router.get('/:movieId', function(req, res, next) {
 
             res.render('movieDetail', {
                 layout: 'nav/yellowprofile.hbs',
+                title: 'Details | Movie Log',
                 movie, director, year 
             });
 
