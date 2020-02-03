@@ -39,6 +39,10 @@ window.addEventListener(
                             >
                             <p style= "
                                 font-size:.6em;
+                                word-wrap: break-word;
+                                overflow: hidden;
+                                max-height: 1em;
+                                line-height: 1em;
                             ">${movie.title}</p>
                             <p style= "
                                 color:grey;
@@ -51,7 +55,9 @@ window.addEventListener(
                             margin-left:0;
                             margin-right:0"
                             class="movie-details-link" 
-                            src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
+                            src="https://image.tmdb.org/t/p/w500${
+                              movie.poster_path
+                            }"
                             data-movieid='${movie.id}'
                         />
                     </section
@@ -109,7 +115,11 @@ window.addEventListener(
                             data-movieid='${movie.id}'
                             >
                             <p style= "
-                                font-size:.6em;
+                              font-size:.6em;
+                              word-wrap: break-word;
+                              overflow: hidden;
+                              max-height: 1em;
+                              line-height: 1em;
                             ">${movie.title}</p>
                             <p style= "
                                 color:grey;
@@ -168,6 +178,7 @@ window.addEventListener(
           height: auto;
           align-content: center;
           justify-content: center;
+          margin-right:0px;
           ">
             <div style="
                 height: auto;
@@ -181,6 +192,10 @@ window.addEventListener(
                 <p style= "
                     margin: 0;
                     font-size:.6em;
+                    word-wrap: break-word;
+                    overflow: hidden;
+                    max-height: 1em;
+                    line-height: 1em;
                 ">
                     ${movie.title}
                 </p>
