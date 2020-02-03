@@ -1920,6 +1920,7 @@ p.list-info {
     overflow: hidden;
     flex-direction: column;
     letter-spacing: 3px;
+    border-radius: 15px;
   }
 
   section.movies-to-see-container {
@@ -1934,6 +1935,7 @@ p.list-info {
     flex-direction: column;
     letter-spacing: 3px;
     justify-content: flex-start;
+    border-radius: 15px;
   }
 
   p.list-name-title {
@@ -1946,6 +1948,10 @@ p.list-info {
     justify-content: flex-start;
     font-size: 30px;
     margin: 10px;
+  }
+
+  .list-wrapper {
+    background: rgba(0, 0, 0, .5);
   }
 
   /* Search bar DESKTOP*/
@@ -2439,6 +2445,7 @@ p {
     padding-bottom: 40px;
     flex-direction: column;
     letter-spacing: 3px;
+    border-radius: 10px;
   }
 
   p.quote-profile {
