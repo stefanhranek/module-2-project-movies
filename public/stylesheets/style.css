@@ -991,7 +991,7 @@ h2.home-section-heading {
   margin-bottom: 50px;
   position: fixed;
   top: 0;
-  background: rgba(0, 0, 0, 0.90);
+  background: rgba(0, 0, 0, 0.9);
   font-size: 20px;
   padding-bottom: 10px;
   border-bottom: 4px solid #ffdc15;
@@ -1020,7 +1020,7 @@ h2.home-section-heading {
   margin-bottom: 10%;
   overflow: scroll;
   margin-top: 10%;
-  font-size: .9em; 
+  font-size: 0.9em;
 }
 
 img.movie-detail-img {
@@ -1043,7 +1043,7 @@ div.error-message {
 }
 
 .movie-runtime span {
-margin: 10px;
+  margin: 10px;
 }
 
 .rating {
@@ -1121,7 +1121,6 @@ margin: 10px;
   width: 100%;
 }
 
-
 .add-button {
   margin-top: 5%;
   padding: 5px 0px;
@@ -1175,7 +1174,6 @@ input.input-style-settings {
   justify-content: flex-start;
 }
 
-
 .back-arrow-icon {
   padding: 2% 0 15% 0;
   height: 20px;
@@ -1196,7 +1194,6 @@ input.input-style-settings {
   display: flex;
   flex-direction: column;
 }
-
 
 .settings-form-wrapper {
   display: flex;
@@ -1238,7 +1235,7 @@ input.input-style-settings {
   font-weight: bolder;
   font-size: 0.9em;
   border-radius: 22px;
-  width: 95%;
+  width: 90%;
   background-color: #ffdc15;
   margin-bottom: 0;
 }
@@ -2050,7 +2047,6 @@ p.list-info {
     width: 100vw;
   }
 
-
   section.movieDetailsDesktopLeftSide {
     display: flex;
     flex-direction: column;
@@ -2065,7 +2061,6 @@ p.list-info {
     width: 40%;
     margin: auto 2%;
   }
-
 
   .movie-detail-main .top {
     margin-bottom: 30px;
@@ -2088,7 +2083,7 @@ p.list-info {
   }
 
   .top h5 {
-    font-size: .6em;
+    font-size: 0.6em;
   }
 
   .movie-plot p {
@@ -2101,7 +2096,7 @@ p.list-info {
     margin-bottom: 2%;
     overflow: scroll;
     margin-top: 4%;
-    font-size: .9em; 
+    font-size: 0.9em;
   }
 
   img.movie-detail-img {
@@ -2129,7 +2124,7 @@ p.list-info {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    font-size: .8em;
+    font-size: 0.8em;
     width: 90%;
     padding: 3% 5%;
   }
@@ -2153,7 +2148,7 @@ p.list-info {
     margin: 0 20px;
   }
 
-  .cast-info span{
+  .cast-info span {
     font-size: 1em;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -2190,6 +2185,120 @@ p.list-info {
     width: 90%;
     background-color: #ffdc15;
     margin: 5%;
+  }
+
+  /*///////////////////////////////////
+////////////// Settings page ///////////
+//////////////////////////////////////*/
+
+  input.input-style-settings {
+    font-size: 1.2em;
+    padding-bottom: 5px;
+  }
+
+  .settings-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 15%;
+    font-family: "Open Sans";
+    font-size: 16px;
+    height: 50vh;
+    width: auto;
+  }
+
+  .settingsWrapHeader {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-size: inherit;
+    margin-bottom: 3%;
+  }
+
+  .settingsWrapperWithoutHeader {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .back-arrow-icon {
+    padding: 2% 0 15% 0;
+    height: 20px;
+  }
+
+  .back-arrow-icon img {
+    height: 40px;
+    width: auto;
+  }
+
+  .settings-header {
+    padding: 0;
+    line-height: 100px;
+    font-size: 20px;
+  }
+
+  .settingsForm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .settings-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .settings-form-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0% 0;
+  }
+
+  .settings-form-section-wrapper input {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid grey;
+    color: white;
+    background: black;
+    width: 100%;
+    height: 10%;
+    caret-color: red;
+    font-size: 1.5em;
+    padding-top: 10px;
+    letter-spacing: 4px;
+  }
+
+  .form-label {
+    font-size: 1.5em;
+    color: grey;
+    letter-spacing: 1.5px;
+  }
+
+  .settings-button {
+    padding: 5px 0px;
+    color: black;
+    font-weight: bolder;
+    font-size: 0.9em;
+    border-radius: 22px;
+    width: 95%;
+    background-color: #ffdc15;
+    margin-bottom: 2%;
+    margin-top: 20px;
+  }
+
+  button.settings-button {
+    display: flex;
+    justify-content: center;
+    margin: 3% 0 0 0;
+    width: 250px;
+  }
+
+  .settingsWrapperWithoutHeader a {
+    width: 100%;
   }
 }
 
