@@ -4,7 +4,9 @@ const User = require('./../../Models/User')
 
 // GET '/private/settings'
 router.get('/', function(req, res, next) {
-    res.render('settings', { user: req.session.currentUser });
+    res.render('settings', { 
+        layout: 'nav/yellowprofile.hbs',
+        user: req.session.currentUser });
 });
 
 

@@ -110,7 +110,10 @@ router.get('/:movieId', function(req, res, next) {
             console.log(year);
 
 
-            res.render('movieDetail', { movie, director, year });
+            res.render('movieDetail', {
+                layout: 'nav/yellowprofile.hbs',
+                movie, director, year 
+            });
 
 
         })
