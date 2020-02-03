@@ -1,28 +1,30 @@
 <div class="settings-page-wrapper">
 
-    <h1>Settings</h1>
-
-    <form  action='/private/settings' method='POST'>
-        <div class='settings-form-section-wrapper'>
-            <label class='form-label' for=''>Name</label>
-            <input class="input-style-settings" value='{{user.username}}' type='text' name='username'>
-        </div>
-
-    <div class='settings-form-section-wrapper'>
-        <label class='form-label' for=''>Email</label>
-        <input class="input-style-settings" value='{{user.email}}' type='text' name='email'>
+    <div class="settingsWrapHeader">
+        <h1>Settings</h1>
     </div>
 
-    <div class='settings-form-section-wrapper'>
-        <label class='form-label' for=''>Quote</label>
-        <input value='{{user.quote}}' class='input-style-settings' type='text' name='quote'> 
-    </div>
+    <div class="settingsWrapperWithoutHeader">
+        <form class="settingsForm" action='/private/settings' method='POST'>
+            <div class='settings-form-section-wrapper'>
+                <label class='form-label' for=''>Name</label>
+                <input class="input-style-settings" value='{{user.username}}' type='text' name='username'>
+            </div>
 
-        <button class='settings-button' type='submit'>Edit profile</button>
+            <div class='settings-form-section-wrapper'>
+                <label class='form-label' for=''>Email</label>
+                <input class="input-style-settings" value='{{user.email}}' type='text' name='email'>
+            </div>
 
-    </form>
+            <div class='settings-form-section-wrapper'>
+                <label class='form-label' for=''>Quote</label>
+                <input value='{{user.quote}}' class='input-style-settings' type='text' name='quote'> 
+            </div>
 
+            <button class='settings-button' type='submit'>Edit profile</button>
+        </form>
         <a href="/auth/logout">
             <button class='settings-button'>Logout now</button>
         </a>
+    </div>
 </div>

@@ -1150,7 +1150,7 @@ margin: 10px;
 
 input.input-style-settings {
   font-size: 1.2em;
-  letter-spacing: 50px;
+  padding-bottom: 5px;
 }
 
 .settings-page-wrapper {
@@ -1158,7 +1158,23 @@ input.input-style-settings {
   flex-direction: column;
   margin: 8%;
   font-family: "Open Sans";
+  font-size: 16px;
+  height: 100vh;
 }
+
+.settingsWrapHeader {
+  height: 10%;
+  margin: 0;
+  font-size: inherit;
+}
+
+.settingsWrapperWithoutHeader {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 
 .back-arrow-icon {
   padding: 2% 0 15% 0;
@@ -1173,54 +1189,69 @@ input.input-style-settings {
 .settings-header {
   padding: 5% 0 15% 0;
   line-height: 100px;
+  font-size: 20px;
 }
+
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .settings-form-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .settings-form-section-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 10% 0 8% 0;
+  padding: 10% 0 0% 0;
 }
 
 .settings-form-section-wrapper input {
   border: 0;
   outline: 0;
-  border-bottom: 4px solid grey;
+  border-bottom: 1px solid grey;
   color: white;
   background: black;
   width: 85%;
-  height: 100px;
+  height: 10%;
   caret-color: red;
-  letter-spacing: 8px;
+  font-size: 1em;
+  padding-top: 10px;
+  letter-spacing: 4px;
 }
 
 .form-label {
-  font-size: 30px;
+  font-size: 1em;
   color: grey;
   letter-spacing: 1.5px;
 }
 
 .settings-button {
-  padding: 30px;
+  margin-top: 0%;
+  padding: 5px 0px;
   color: black;
   font-weight: bolder;
-  font-size: 1em;
+  font-size: 0.9em;
   border-radius: 22px;
   width: 95%;
   background-color: #ffdc15;
+  margin-bottom: 0;
 }
 
 button.settings-button {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: -25px;
+  margin-top: 10%;
 }
 
+.settingsWrapperWithoutHeader a {
+  width: 100%;
+}
 /* hr line */
 
 hr {
