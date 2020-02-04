@@ -8,7 +8,6 @@ Users can keep track of all the movies they have watched, and separate the speci
 
 https://m2-deploy-movielog.herokuapp.com/
 
-⚠️ <b>Note:</b> This app was designed to be <b>mobile-view only</b>. So, until we make this app desktop-responsive, we ask you open up chrome/mozilla devTools and toggle 'device toolbar'. <i>'iPhone X'</i> is the most optimal device to view the app on. We apologize for this temporary inconvenience, but we do wish for you the intended user experience.
 
 ## User Stories
 
