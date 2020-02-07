@@ -20,7 +20,11 @@
                 </p> --}}
                 <h4 class="favoriteQuote">Favorite quote:</h4>
                 <p class="quote-profile">
-                    {{user.quote}}
+                    {{#if user.quote}}
+                    <p>{{user.quote}}</p>
+                    {{else}}
+                    <p style='font-style: italic; color: grey'>Click the settings icon to add a quote!</p>
+                    {{/if}}
                 </p>
             </div>
         </section>
@@ -30,10 +34,12 @@
         <div class="list">
             <p class="list-name-title">Movies I've watched: </p>
             <section class="seen-movies-container">
-                <p class="list-info">{{#each seenMovies}}</p>
+                {{#each seenMovies}}
                 <a href="/private/movieDetail/{{this.data.id}}">
                     <p class="list-info">{{this.data.title}}</p>
                 </a>
+                {{else}}
+                <p style='font-style: italic; color: grey'>Movies will display here once added to your list.</p>
                 {{/each}}
             </section>
 
@@ -44,6 +50,8 @@
                 <a href="/private/movieDetail/{{this.data.id}}">
                     <p class="list-info">{{this.data.title}}</p>
                 </a>
+                {{else}}
+                <p style='font-style: italic; color: grey'>Movies will display here once added to your list.</p>
                 {{/each}}
             </section>
 
