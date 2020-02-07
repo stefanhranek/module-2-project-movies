@@ -1,15 +1,9 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-
 // GET '/public/signup'
-router.get('/', function(req, res, next) {
-    res.render('signup', { layout: 'layoutPublic.hbs' });
+router.get("/", function(req, res, next) {
+  res.render("signup", { layout: "layoutPublic.hbs" });
 });
-
-/* POST signup page. */
-// router.post('/signup', function(req, res, next) {
-//     res.send('signup', { title: 'signup page' });
-// });
 
 module.exports = router;
