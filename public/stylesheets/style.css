@@ -137,13 +137,9 @@ table {
   border-spacing: 0;
 }
 
-/*///////////////////////////
- ///// END OF CSS RESET //////
-///////////////////////////*/
+/*///// END OF CSS RESET /////*/
 
-/*/////////////////////////////////////////////////////
-//////////// GENERAL ELEMENT ATTRIBUTES ///////////////
-/////////////////////////////////////////////////////*/
+/*/// GENERAL ELEMENT ATTRIBUTES ///*/
 
 .background {
   background: repeat
@@ -204,7 +200,7 @@ a {
   color: white;
 }
 
-/*////////// CLASSES /////////////////*/
+/*// CLASSES //*/
 
 .background-image-profile {
   background: repeat-y url("./../images/goku2.jpg");
@@ -454,10 +450,6 @@ h2 {
   color: black;
 }
 
-/*//////////////////////
-/////Stefan's edits/////
-//////////////////////*/
-
 /* Desktop nav */
 .desktopNav {
   display: none;
@@ -618,7 +610,6 @@ p.form-label-password-bottom {
   border-radius: 22px;
   width: 95%;
   background-color: #ffdc15;
-  /* button background color is set in 'button' style near top */
 }
 
 a.sign-up-now-text {
@@ -723,7 +714,6 @@ label.form-label {
   border-radius: 22px;
   width: 95%;
   background-color: #ffdc15;
-  /* button background color is set in 'button' style near top */
 }
 
 .remove {
@@ -809,7 +799,6 @@ input:focus {
     sans-serif;
   font-size: 1em;
   font-weight: bold;
-  /* transition: 0.2s; */
 }
 
 .searchbar:focus {
@@ -819,7 +808,6 @@ input:focus {
   font-size: 1.5em;
   font-weight: bold;
   transition: 0.3s;
-  /* Stops the input box from inheriting the styling from the inputs on the request form */
   border-bottom: yellow solid 2px;
   outline: none;
   padding: 16px 10px 16px 10px;
@@ -853,9 +841,7 @@ img.fa.fa-search {
   color: rgb(0, 0, 0);
 }
 
-/*/////////////////////////
-/////// Home page ////////
-///////////////////////*/
+/*/ Home page /*/
 
 .home-container {
   display: flex;
@@ -940,9 +926,7 @@ h2.home-section-heading {
 
 /* Api data */
 
-/*////////////////////
-/////Error Page//////
-//////////////////*/
+/*//Error Page//*/
 
 .error-page-container {
   height: 100%;
@@ -992,9 +976,7 @@ h2.home-section-heading {
   height: 80px;
 }
 
-/*//////// MOVIE DETAIL //////////////
-/////////////////////////////////////
-//////////////////////////////////////*/
+/*// MOVIE DETAIL //*/
 
 .movie-detail-main {
   display: flex;
@@ -1167,9 +1149,7 @@ div.error-message {
   background-color: #ffdc15;
 }
 
-/*///////////////////////////////////
-////////////// Settings page ///////////
-//////////////////////////////////////*/
+/*// Settings page //*/
 
 input.input-style-settings {
   font-size: 1.2em;
@@ -1290,9 +1270,7 @@ hr.title-hr {
   border-top: 2px solid #ffdc15;
 }
 
-/*////////////////////////////////////
-////////////// Profile page /////////////
-//////////////////////////////////////*/
+/*/ Profile page /*/
 
 div.profile-page-wrapper {
   display: flex;
@@ -1419,15 +1397,8 @@ p.list-info {
 .list-wrapper {
   padding: 0;
 }
-/*////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////*/
-/*//////////////////////////////////////////////////////////////////*/
-/*/////////////////////////////////////////////////////////////////*/
+
 /*///// TIME FOR SOME DESKTOP RESPONSIVENESS !!! YEE-HAW !!! /////*/
-/*///////////////////////////////////////////////////////////////*/
-/*//////////////////////////////////////////////////////////////*/
-/*/////////////////////////////////////////////////////////////*/
-/*////////////////////////////////////////////////////////////*/
 
 @media only screen and (min-width: 768px) {
   html,
@@ -1445,19 +1416,16 @@ p.list-info {
     -webkit-border-radius: 10px;
     border-radius: 10px;
   }
-  /*add a shadow to the scrollbar here*/
   ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
     -webkit-border-radius: 10px;
     border-radius: 10px;
   }
-  /*this is the little scrolly dealio in the bar*/
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: rgba(106, 103, 103, 0.945);
     height: 3px;
   }
-  /*nobody needs this little scrollbar corner, I mean really, get rid of it haha*/
   ::-webkit-scrollbar-corner {
     display: none;
     height: 0px;
@@ -1615,7 +1583,6 @@ p.list-info {
     border-radius: 22px;
     width: 20%;
     background-color: #ffdc15;
-    /* button background color is set in 'button' style near top */
   }
 
   a.sign-up-now-text {
@@ -1705,7 +1672,6 @@ p.list-info {
     border-radius: 22px;
     width: 20%;
     background-color: rgb(255, 220, 21);
-    /* button background color is set in 'button' style near top */
   }
 
   .bottom-signup {
@@ -1753,9 +1719,7 @@ p.list-info {
     animation: 2s infinite rainbow;
   }
 
-  /*/////////////////////////
-/////// Home page ////////
-///////////////////////*/
+  /*// Home page //*/
 
   .background {
     background: no-repeat
@@ -1860,9 +1824,7 @@ p.list-info {
     display: none;
   }
 
-  /*////////////////////////////////////
-////////////// Profile page /////////////
-//////////////////////////////////////*/
+  /*/// Profile page ///*/
 
   div.profile-page-wrapper {
     display: flex;
@@ -1980,10 +1942,6 @@ p.list-info {
   }
 
   /* Search bar DESKTOP*/
-  /* Search bar DESKTOP*/
-  /* Search bar DESKTOP*/
-  /* Search bar DESKTOP*/
-  /* Search bar DESKTOP*/
 
   #get-movie-section {
     height: 100vh;
@@ -2025,7 +1983,6 @@ p.list-info {
       sans-serif;
     font-size: 1em;
     font-weight: bold;
-    /* transition: 0.2s; */
   }
 
   .searchbar:focus {
@@ -2035,7 +1992,6 @@ p.list-info {
     font-size: 1em;
     font-weight: bold;
     transition: 0.3s;
-    /* Stops the input box from inheriting the styling from the inputs on the request form */
     border-bottom: yellow solid 2px;
     outline: none;
     padding: 16px 10px 16px 10px;
@@ -2084,9 +2040,7 @@ p.list-info {
     justify-content: space-evenly;
   }
 
-  /*//////// MOVIE DETAIL //////////////
-/////////////////////////////////////
-//////////////////////////////////////*/
+  /*/// MOVIE DETAIL ///*/
 
   .movie-detail-main {
     display: flex;
@@ -2244,9 +2198,7 @@ p.list-info {
     margin: 5%;
   }
 
-  /*///////////////////////////////////
-////////////// Settings page ///////////
-//////////////////////////////////////*/
+  /*//// Settings page ////*/
 
   .desktopNavSettings {
     position: absolute;
@@ -2402,20 +2354,10 @@ p {
   height: auto;
 }
 
-/*//////////////////////////////////////////////
-////////////// SPECIAL CASES BELOW /////////////
-////////////////////////////////////////////*/
-/*//////////////////////////////////////////////
-////////////// SPECIAL CASES BELOW /////////////
-////////////////////////////////////////////*/
-/*//////////////////////////////////////////////
-////////////// SPECIAL CASES BELOW /////////////
-////////////////////////////////////////////*/
+/*// SPECIAL CASES BELOW //*/
 
 @media only screen and (min-width: 1350px) {
-  /*////////////////////////////////////
-////////////// Profile page /////////////
-//////////////////////////////////////*/
+  /*// Profile page //*/
 
   .desktopFlexColumn {
     display: flex;
