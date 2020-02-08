@@ -1029,6 +1029,20 @@ h2.home-section-heading {
   font-size: 0.9em;
 }
 
+img {
+  cursor: pointer;
+}
+
+.movie-details-link {
+  transition: all .3s ease;
+}
+
+img.movie-details-link:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 3px 3px 1px 11px rgba(255, 255, 255, 0.25), -3px -3px 1px 11px rgba(248, 203, 0, 0.22);
+  filter: grayscale(.4);
+}
+
 img.movie-detail-img {
   width: 100%;
   height: auto;
