@@ -1424,7 +1424,7 @@ p.list-info {
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: rgba(106, 103, 103, 0.945);
+    background: rgba(106, 103, 103, 0.329);
     height: 3px;
   }
   ::-webkit-scrollbar-corner {
