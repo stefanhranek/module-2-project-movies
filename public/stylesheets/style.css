@@ -137,6 +137,15 @@ table {
   border-spacing: 0;
 }
 
+button {
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  filter: grayscale();
+  transform: scale(1.05)
+}
 /*///// END OF CSS RESET /////*/
 
 /*/// GENERAL ELEMENT ATTRIBUTES ///*/
