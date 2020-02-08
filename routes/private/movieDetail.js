@@ -67,8 +67,6 @@ router.get("/:movieId", function(req, res, next) {
 
       const year = movie.release_date.slice(0, 4);
 
-      console.log(year);
-
       res.render("movieDetail", {
         layout: "nav/yellowprofile.hbs",
         title: "Details | Movie Log",

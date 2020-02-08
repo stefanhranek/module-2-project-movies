@@ -2184,6 +2184,8 @@ p.list-info {
     width: auto;
     margin-bottom: 0px;
     align-self: center;
+    border: 2px solid transparent;
+    border-radius: 11px;
   }
 
   div.error-message {
