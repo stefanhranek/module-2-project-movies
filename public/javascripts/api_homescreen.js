@@ -7,11 +7,9 @@ window.addEventListener(
       )
       .then(response => {
         const homeMovies = response.data.results;
-
         const nowPlayingMovies = document.querySelector(
           ".now-playing-api-movie-data"
         );
-        console.log("cozy", nowPlayingMovies);
 
         let htmlString = "";
         homeMovies.forEach(function(movie) {
@@ -26,7 +24,9 @@ window.addEventListener(
                         display:flex;
                         flex-direction:column;
                         margin:0 ;
+                        margin-right:35px;
                         height: auto;
+                        margin-bottom: 20px;
                     ">
                         <h2 style="
                             height: auto;
@@ -73,8 +73,6 @@ window.addEventListener(
         movieDetailLinks.forEach(element => {
           element.addEventListener("click", e => {
             const movieId = element.dataset.movieid;
-            console.log("THIS IS EEEEE", e);
-
             // axios.get(`/private/movieDetail/get/${movieId}`)
             window.location.assign(`/private/movieDetail/${movieId}`);
           });
@@ -87,7 +85,6 @@ window.addEventListener(
       )
       .then(response => {
         const homeMovies = response.data.results;
-
         const nowPlayingMovies = document.querySelector(".upcoming-movie-data");
 
         let htmlString = "";
@@ -103,7 +100,9 @@ window.addEventListener(
               display:flex;
               flex-direction:column;
               margin:0 ;
+              margin-right:35px;
               height: auto;
+              margin-bottom: 20px;
           ">
               <h2 style="
                             height: auto;
@@ -147,7 +146,6 @@ window.addEventListener(
         movieDetailLinks.forEach(element => {
           element.addEventListener("click", e => {
             const movieId = element.dataset.movieid;
-
             // axios.get(`/private/movieDetail/get/${movieId}`)
             window.location.assign(`/private/movieDetail/${movieId}`);
           });
@@ -160,7 +158,6 @@ window.addEventListener(
       )
       .then(response => {
         const homeMovies = response.data.results;
-
         const nowPlayingMovies = document.querySelector(".trending-movie-data");
 
         let htmlString = "";
@@ -169,26 +166,26 @@ window.addEventListener(
           <div style = "
           display:flex; 
           flex-direction:row;
-          justify-content:space-around"
+          justify-content:space-around";
+          height:auto;
           >
-          <section style= "
-          display:flex;
-          flex-direction:column;
-          margin:0 ;
-          height: auto;
-          align-content: center;
-          justify-content: center;
-          margin-right:0px;
-          ">
-            <div style="
-                height: auto;
-                text-align:center;
-                margin-top:10px;
-                margin-bottom:5px;
-                font-size:1em;" 
-                class='movie-title movie-details-link' 
-                data-movieid='${movie.id}'
-            >
+            <section style= "
+            display:flex;
+            flex-direction:column;
+            margin:0 ;
+            margin-right:35px;
+            height: auto;
+            margin-bottom: 20px;
+            ">
+              <div style="
+                  height: auto;
+                  text-align:center;
+                  margin-top:10px;
+                  margin-bottom:5px;
+                  font-size:1em;" 
+                  class='movie-title movie-details-link' 
+                  data-movieid='${movie.id}'
+              >
                 <p style= "
                     margin: 0;
                     font-size:.6em;
