@@ -50,6 +50,8 @@ window.addEventListener(
                             ">${movie.release_date.slice(0, 4)}</p>
                         </h2>
                         <img style= "
+                            border: 2px solid transparent;
+                            border-radius: 10px;
                             width:auto;
                             height:200px;
                             margin-left:0;
@@ -126,6 +128,8 @@ window.addEventListener(
                             ">${movie.release_date.slice(0, 4)}</p>
                         </h2>
               <img style= "
+                    border: 2px solid transparent;
+                    border-radius: 11px;
                     width:auto;
                     height:200px;
                     margin-left:0;
@@ -204,13 +208,15 @@ window.addEventListener(
                 </p>
             </div>
             <img style= "
-                width:auto;
-                height:200px;
-                margin-left:0;
-                margin-right:0"
-                class="movie-details-link" 
-                src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
-                data-movieid='${movie.id}'
+              border: 2px solid transparent;
+              border-radius: 11px;
+              width:auto;
+              height:200px;
+              margin-left:0;
+              margin-right:0"
+              class="movie-details-link" 
+              src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
+              data-movieid='${movie.id}'
             />
           </section>
       </div>`;
