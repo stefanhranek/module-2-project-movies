@@ -1304,7 +1304,7 @@ div.profile-page-wrapper {
 }
 
 .settings-icon {
-  padding: 0 0 20px 0;
+  padding: 0 0 0px 0;
   height: 20px;
 }
 
@@ -1312,6 +1312,20 @@ img.settings-icon {
   height: 30px;
   width: auto;
   float: right;
+  transition: 1s;
+}
+
+img.settings-icon:hover {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 div.settings-and-profile-pic-wrapper {
@@ -1929,7 +1943,7 @@ p.list-info {
   }
 
   .settings-icon {
-    padding: 10% 0 15% 0;
+    padding: 0 0 0 0;
     height: 20px;
   }
 
@@ -2475,7 +2489,7 @@ p {
 
   .settings-icon {
     visibility: visible;
-    padding: 0 0 20px 0;
+    padding: 0 0 0px 0;
     height: 20px;
   }
 
@@ -2483,8 +2497,8 @@ p {
     height: 40px;
     width: auto;
     float: left;
-    padding-left: 10px;
-    padding-top: 2%;
+    padding-left: 0px;
+    padding-top: 0;
   }
 
   div.settings-and-profile-pic-wrapper {
