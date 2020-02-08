@@ -2055,7 +2055,7 @@ p.list-info {
     margin-top: 0;
     margin-right: 8px;
     font-family: Open Sans;
-    font-size: 15px;
+    font-size: 1em;
     font-weight: bold;
     border-bottom: yellow solid 3px;
     transition: 0.3s;
@@ -2077,10 +2077,10 @@ p.list-info {
     font-size: 1em;
     font-weight: bold;
     transition: 0.3s;
-    border-bottom: yellow solid 2px;
+    border-bottom: yellow solid 3px;
     outline: none;
-    padding: 16px 10px 16px 10px;
-    letter-spacing: 2px;
+    padding: 16px 10px 0px 10px;
+    letter-spacing: 1px;
   }
 
   .btn-search {
@@ -2098,8 +2098,8 @@ p.list-info {
   img.fa.fa-search {
     display: flex;
     padding-left: 0;
-    height: 1.5em;
-    padding-top: 0;
+    height: 1.2em;
+    margin-top: 10px;
   }
 
   #get-movie-form {
