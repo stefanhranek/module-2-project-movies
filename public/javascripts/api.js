@@ -45,7 +45,13 @@ function main() {
                         >
                         ${movie.title} (${movie.release_date.slice(0, 4)})
                         </h2>
-                        <img style= "width:86%;height:auto;margin: auto 7%;"
+                        <img style= "
+                          width:86%;
+                          height:auto;
+                          margin: auto 7%;
+                          border: 2px solid transparent;
+                          border-radius: 15px;
+                        "
                         class="movie-details-link" 
                         src="https://image.tmdb.org/t/p/w500${
                           movie.poster_path
